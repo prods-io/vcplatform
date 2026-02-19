@@ -38,6 +38,7 @@ interface SavedVC {
   vc_firms: {
     id: string;
     name: string;
+    slug: string;
     type: string;
     headquarters: string | null;
     logo_url: string | null;
@@ -111,6 +112,7 @@ export default function SavedVCsPage() {
         vc_firms (
           id,
           name,
+          slug,
           type,
           headquarters,
           logo_url,
@@ -398,6 +400,15 @@ export default function SavedVCsPage() {
                         >
                           Cancel
                         </Button>
+                        {firm?.slug && (
+                          <Link
+                            href={`/vc/${firm.slug}`}
+                            className="text-sm font-medium text-indigo-600 hover:text-indigo-700"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            View Profile →
+                          </Link>
+                        )}
                         <div className="flex-1" />
                         <Button
                           variant="ghost"

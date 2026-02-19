@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Search,
   Heart,
@@ -67,6 +68,7 @@ const PAGE_SIZE = 12;
 interface VCFirm {
   id: string;
   name: string;
+  slug: string;
   type: string;
   investment_stages: string[];
   sectors: string[];
@@ -114,6 +116,7 @@ function colorFor(name: string) {
 
 export default function DiscoverPage() {
   const supabase = createBrowserClient();
+  const router = useRouter();
 
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
@@ -174,7 +177,7 @@ export default function DiscoverPage() {
 
     let query = supabase
       .from('vc_firms')
-      .select('id, name, type, investment_stages, sectors, check_size_min, check_size_max, headquarters, logo_url, geographies', {
+      .select('id, name, slug, type, investment_stages, sectors, check_size_min, check_size_max, headquarters, logo_url, geographies', {
         count: 'exact',
       });
 
@@ -536,7 +539,8 @@ export default function DiscoverPage() {
               {vcs.map((vc) => (
                 <Card
                   key={vc.id}
-                  className="transition-shadow hover:shadow-md"
+                  className="cursor-pointer transition-shadow hover:shadow-md"
+                  onClick={() => router.push(`/vc/${vc.slug}`)}
                 >
                   <CardContent className="p-5">
                     <div className="flex items-start justify-between gap-2">
@@ -556,7 +560,7 @@ export default function DiscoverPage() {
                         </div>
                       </div>
                       <button
-                        onClick={() => toggleSave(vc.id)}
+                        onClick={(e) => { e.stopPropagation(); toggleSave(vc.id); }}
                         disabled={togglingId === vc.id}
                         className="shrink-0 p-1 transition-colors"
                         aria-label={savedIds.has(vc.id) ? 'Unsave' : 'Save'}

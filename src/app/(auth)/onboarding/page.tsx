@@ -27,6 +27,7 @@ import {
   STAGES,
   TEAM_SIZES,
 } from '@/lib/utils/constants';
+import { slugify } from '@/lib/utils/helpers';
 
 const STEPS = [
   { number: 1, title: 'Personal Info' },
@@ -41,7 +42,6 @@ export default function OnboardingPage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
-  const [userEmail, setUserEmail] = useState<string>('');
 
   // Step 1: Personal Info
   const [fullName, setFullName] = useState('');
@@ -75,7 +75,6 @@ export default function OnboardingPage() {
       }
 
       setUserId(user.id);
-      setUserEmail(user.email || '');
 
       // Pre-fill name from auth metadata if available
       if (user.user_metadata?.full_name) {
@@ -100,18 +99,22 @@ export default function OnboardingPage() {
       return false;
     }
 
-    if (!userId) return false;
+    if (!userId) {
+      toast.error('Session not found. Please refresh the page and try again.');
+      return false;
+    }
 
     setIsLoading(true);
     try {
-      const { error } = await supabase.from('profiles').upsert({
-        id: userId,
-        email: userEmail,
-        full_name: fullName.trim(),
-        linkedin_url: linkedinUrl.trim() || null,
-        bio: bio.trim() || null,
-        updated_at: new Date().toISOString(),
-      });
+      const { error } = await supabase
+        .from('profiles')
+        .update({
+          full_name: fullName.trim(),
+          linkedin_url: linkedinUrl.trim() || null,
+          bio: bio.trim() || null,
+          updated_at: new Date().toISOString(),
+        })
+        .eq('id', userId);
 
       if (error) {
         toast.error('Failed to save profile. ' + error.message);
@@ -133,7 +136,10 @@ export default function OnboardingPage() {
       return false;
     }
 
-    if (!userId) return false;
+    if (!userId) {
+      toast.error('Session not found. Please refresh the page and try again.');
+      return false;
+    }
 
     setIsLoading(true);
     try {
@@ -141,8 +147,9 @@ export default function OnboardingPage() {
         {
           founder_id: userId,
           name: startupName.trim(),
+          slug: slugify(startupName.trim()),
           tagline: tagline.trim() || null,
-          sector: selectedSectors.length > 0 ? selectedSectors : null,
+          sector: selectedSectors,
           stage: stage || null,
           location_city: locationCity.trim() || null,
           location_country: locationCountry.trim() || null,

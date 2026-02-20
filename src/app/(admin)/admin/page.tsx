@@ -77,29 +77,29 @@ export default function AdminDashboardPage() {
       title: 'Total VC Firms',
       value: stats.vcFirms,
       icon: Building2,
-      color: 'text-blue-600',
-      bg: 'bg-blue-50',
+      color: 'text-blue-400',
+      bg: 'bg-blue-900/30',
     },
     {
       title: 'Total Partners',
       value: stats.partners,
       icon: Users,
-      color: 'text-emerald-600',
-      bg: 'bg-emerald-50',
+      color: 'text-emerald-400',
+      bg: 'bg-emerald-900/30',
     },
     {
       title: 'Total Founders',
       value: stats.founders,
       icon: Rocket,
-      color: 'text-violet-600',
-      bg: 'bg-violet-50',
+      color: 'text-violet-400',
+      bg: 'bg-violet-900/30',
     },
     {
       title: 'Total Startups',
       value: stats.startups,
       icon: Briefcase,
-      color: 'text-amber-600',
-      bg: 'bg-amber-50',
+      color: 'text-amber-400',
+      bg: 'bg-amber-900/30',
     },
   ];
 
@@ -108,7 +108,7 @@ export default function AdminDashboardPage() {
       <div>
         <h2 className="text-2xl font-bold tracking-tight">Admin Dashboard</h2>
         <p className="text-muted-foreground">
-          Overview of the VCConnect platform.
+          Overview of the CapConnect platform.
         </p>
       </div>
 
@@ -128,7 +128,7 @@ export default function AdminDashboardPage() {
               </CardHeader>
               <CardContent>
                 {loading ? (
-                  <div className="h-8 w-16 animate-pulse rounded bg-gray-200" />
+                  <div className="h-8 w-16 animate-pulse rounded bg-secondary" />
                 ) : (
                   <p className="text-3xl font-bold">{card.value}</p>
                 )}
@@ -173,10 +173,10 @@ export default function AdminDashboardPage() {
             {loading ? (
               Array.from({ length: 3 }).map((_, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="h-10 w-10 animate-pulse rounded-full bg-gray-200" />
+                  <div className="h-10 w-10 animate-pulse rounded-full bg-secondary" />
                   <div className="flex-1 space-y-2">
-                    <div className="h-4 w-3/4 animate-pulse rounded bg-gray-200" />
-                    <div className="h-3 w-1/2 animate-pulse rounded bg-gray-200" />
+                    <div className="h-4 w-3/4 animate-pulse rounded bg-secondary" />
+                    <div className="h-3 w-1/2 animate-pulse rounded bg-secondary" />
                   </div>
                 </div>
               ))

@@ -156,7 +156,7 @@ export default function AdminVCsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b bg-gray-50/50">
+                <tr className="border-b bg-secondary/50">
                   <th className="px-4 py-3 text-left font-medium text-muted-foreground">
                     Name
                   </th>
@@ -186,7 +186,7 @@ export default function AdminVCsPage() {
                     <tr key={i} className="border-b">
                       {Array.from({ length: 7 }).map((_, j) => (
                         <td key={j} className="px-4 py-3">
-                          <div className="h-4 w-20 animate-pulse rounded bg-gray-200" />
+                          <div className="h-4 w-20 animate-pulse rounded bg-secondary" />
                         </td>
                       ))}
                     </tr>
@@ -206,7 +206,7 @@ export default function AdminVCsPage() {
                   firms.map((firm) => (
                     <tr
                       key={firm.id}
-                      className="border-b transition-colors hover:bg-gray-50/50"
+                      className="border-b transition-colors hover:bg-secondary/50"
                     >
                       <td className="px-4 py-3 font-medium">{firm.name}</td>
                       <td className="px-4 py-3 text-muted-foreground">

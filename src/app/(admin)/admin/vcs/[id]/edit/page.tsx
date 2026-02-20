@@ -214,10 +214,10 @@ export default function EditVCPage() {
     return (
       <div className="mx-auto max-w-3xl space-y-6">
         <div className="flex items-center gap-4">
-          <div className="h-10 w-10 animate-pulse rounded bg-gray-200" />
+          <div className="h-10 w-10 animate-pulse rounded bg-secondary" />
           <div className="space-y-2">
-            <div className="h-6 w-48 animate-pulse rounded bg-gray-200" />
-            <div className="h-4 w-64 animate-pulse rounded bg-gray-200" />
+            <div className="h-6 w-48 animate-pulse rounded bg-secondary" />
+            <div className="h-4 w-64 animate-pulse rounded bg-secondary" />
           </div>
         </div>
         {Array.from({ length: 3 }).map((_, i) => (
@@ -225,7 +225,7 @@ export default function EditVCPage() {
             <CardContent className="p-6">
               <div className="space-y-4">
                 {Array.from({ length: 3 }).map((_, j) => (
-                  <div key={j} className="h-10 animate-pulse rounded bg-gray-200" />
+                  <div key={j} className="h-10 animate-pulse rounded bg-secondary" />
                 ))}
               </div>
             </CardContent>
@@ -269,13 +269,13 @@ export default function EditVCPage() {
       </div>
 
       {success && (
-        <div className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-800">
+        <div className="rounded-lg border border-border bg-green-900/30 px-4 py-3 text-sm text-green-400">
           VC firm updated successfully! Redirecting...
         </div>
       )}
 
       {error && (
-        <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+        <div className="rounded-lg border border-border bg-red-900/30 px-4 py-3 text-sm text-red-400">
           {error}
         </div>
       )}

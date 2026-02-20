@@ -262,7 +262,7 @@ export default function AdminSeedPage() {
 
       {/* Parse Error */}
       {parseError && (
-        <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+        <div className="rounded-lg border border-border bg-red-900/30 px-4 py-3 text-sm text-red-400">
           <div className="flex items-start gap-2">
             <XCircle className="mt-0.5 h-4 w-4 shrink-0" />
             <span>{parseError}</span>
@@ -293,7 +293,7 @@ export default function AdminSeedPage() {
                 {samplePreview?.map((item, idx) => (
                   <div
                     key={idx}
-                    className="rounded-lg border bg-gray-50 p-3 text-sm"
+                    className="rounded-lg border bg-secondary p-3 text-sm"
                   >
                     <p className="font-medium">{item.name}</p>
                     <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground">
@@ -336,7 +336,7 @@ export default function AdminSeedPage() {
             {/* Progress bar */}
             {importing && (
               <div className="space-y-2">
-                <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200">
+                <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
                   <div
                     className="h-full rounded-full bg-primary transition-all duration-300"
                     style={{
@@ -359,7 +359,7 @@ export default function AdminSeedPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               {result.errors === 0 ? (
-                <CheckCircle2 className="h-5 w-5 text-green-600" />
+                <CheckCircle2 className="h-5 w-5 text-green-400" />
               ) : (
                 <XCircle className="h-5 w-5 text-amber-600" />
               )}
@@ -368,30 +368,30 @@ export default function AdminSeedPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-3">
-              <div className="rounded-lg border bg-gray-50 p-4 text-center">
+              <div className="rounded-lg border bg-secondary p-4 text-center">
                 <p className="text-2xl font-bold">{result.total}</p>
                 <p className="text-sm text-muted-foreground">Total Records</p>
               </div>
-              <div className="rounded-lg border border-green-200 bg-green-50 p-4 text-center">
-                <p className="text-2xl font-bold text-green-700">
+              <div className="rounded-lg border border-border bg-green-900/30 p-4 text-center">
+                <p className="text-2xl font-bold text-green-400">
                   {result.success}
                 </p>
-                <p className="text-sm text-green-600">Successful</p>
+                <p className="text-sm text-green-400">Successful</p>
               </div>
-              <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-center">
-                <p className="text-2xl font-bold text-red-700">
+              <div className="rounded-lg border border-border bg-red-900/30 p-4 text-center">
+                <p className="text-2xl font-bold text-red-400">
                   {result.errors}
                 </p>
-                <p className="text-sm text-red-600">Failed</p>
+                <p className="text-sm text-red-400">Failed</p>
               </div>
             </div>
 
             {result.errorMessages.length > 0 && (
               <div className="space-y-2">
-                <p className="text-sm font-medium text-red-700">Errors:</p>
-                <div className="max-h-40 overflow-y-auto rounded-lg border border-red-200 bg-red-50 p-3">
+                <p className="text-sm font-medium text-red-400">Errors:</p>
+                <div className="max-h-40 overflow-y-auto rounded-lg border border-border bg-red-900/30 p-3">
                   {result.errorMessages.map((msg, idx) => (
-                    <p key={idx} className="text-sm text-red-700">
+                    <p key={idx} className="text-sm text-red-400">
                       {msg}
                     </p>
                   ))}
@@ -400,7 +400,7 @@ export default function AdminSeedPage() {
             )}
 
             {result.success > 0 && (
-              <p className="text-sm text-green-700">
+              <p className="text-sm text-green-400">
                 Successfully imported {result.success} VC firm
                 {result.success !== 1 ? 's' : ''} into the database.
               </p>

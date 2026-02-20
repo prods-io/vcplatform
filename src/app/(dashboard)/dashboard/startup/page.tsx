@@ -216,8 +216,8 @@ export default function StartupPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">My Startup</h1>
-          <p className="mt-1 text-gray-500">
+          <h1 className="text-2xl font-bold text-foreground">My Startup</h1>
+          <p className="mt-1 text-muted-foreground">
             Tell VCs about your startup. A complete profile improves your visibility.
           </p>
         </div>
@@ -237,7 +237,7 @@ export default function StartupPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <Building2 className="h-5 w-5 text-indigo-600" />
+                <Building2 className="h-5 w-5 text-primary" />
                 Basic Information
               </CardTitle>
             </CardHeader>
@@ -367,7 +367,7 @@ export default function StartupPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <Globe className="h-5 w-5 text-indigo-600" />
+                <Globe className="h-5 w-5 text-primary" />
                 Funding
               </CardTitle>
             </CardHeader>
@@ -407,7 +407,7 @@ export default function StartupPage() {
               <CardTitle className="text-base">Sectors</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="mb-3 text-sm text-gray-500">
+              <p className="mb-3 text-sm text-muted-foreground">
                 Select all sectors that apply to your startup.
               </p>
               <div className="space-y-2">

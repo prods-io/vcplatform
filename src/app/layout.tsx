@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "VCConnect - Find the Right Investors for Your Startup",
+  title: "CapConnect - Find the Right Investors for Your Startup",
   description:
     "Discover venture capital firms that match your stage, sector, and geography. Get AI-powered pitch feedback and manage your fundraising pipeline.",
 };
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <body className={`${inter.className} antialiased`}>
         {children}
         <Toaster />

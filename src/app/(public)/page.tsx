@@ -7,13 +7,19 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Search, FileText, Target, ArrowRight } from "lucide-react";
+import { createClient } from "@/lib/supabase/server";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const isLoggedIn = !!user;
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50/50 to-background py-24 md:py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(99,102,241,0.12),transparent)]" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-amber-950/20 via-background to-background py-24 md:py-32">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(202,138,4,0.08),transparent)]" />
         <div className="container relative mx-auto px-4 text-center">
           <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Find the Right Investors{" "}
@@ -26,19 +32,21 @@ export default function LandingPage() {
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button size="lg" className="h-12 px-8 text-base" asChild>
-              <Link href="/signup">
-                Get Started Free
+              <Link href={isLoggedIn ? "/dashboard/discover" : "/signup"}>
+                {isLoggedIn ? "View Dashboard" : "Get Started Free"}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-12 px-8 text-base"
-              asChild
-            >
-              <Link href="/dashboard/discover">Explore VCs</Link>
-            </Button>
+            {!isLoggedIn && (
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-12 px-8 text-base"
+                asChild
+              >
+                <Link href="/dashboard/discover">Explore VCs</Link>
+              </Button>
+            )}
           </div>
         </div>
       </section>
@@ -182,17 +190,17 @@ export default function LandingPage() {
       {/* CTA Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl rounded-2xl bg-gradient-to-br from-primary/5 via-primary/10 to-indigo-500/5 px-8 py-16 text-center shadow-sm ring-1 ring-primary/10">
+          <div className="mx-auto max-w-3xl rounded-2xl bg-gradient-to-br from-primary/5 via-primary/10 to-amber-900/10 px-8 py-16 text-center shadow-sm ring-1 ring-primary/10">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               Ready to find your perfect investor?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-              Join thousands of founders who are using VCConnect to streamline
+              Join thousands of founders who are using CapConnect to streamline
               their fundraising process.
             </p>
             <Button size="lg" className="mt-8 h-12 px-8 text-base" asChild>
-              <Link href="/signup">
-                Get Started Free
+              <Link href={isLoggedIn ? "/dashboard/discover" : "/signup"}>
+                {isLoggedIn ? "View Dashboard" : "Get Started Free"}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

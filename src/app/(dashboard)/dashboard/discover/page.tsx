@@ -13,6 +13,12 @@ import {
   Loader2,
 } from 'lucide-react';
 import { createBrowserClient } from '@/lib/supabase/client';
+import {
+  VC_TYPES,
+  STAGES as STAGE_OPTIONS,
+  SECTORS as SECTOR_OPTIONS,
+  GEOGRAPHIES as GEO_OPTIONS,
+} from '@/lib/utils/constants';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -35,35 +41,13 @@ import {
 } from '@/components/ui/sheet';
 import { Skeleton } from '@/components/ui/skeleton';
 
-const TYPES = ['VC', 'Angel', 'Incubator', 'Accelerator', 'Grant'];
-const STAGES = ['Pre-seed', 'Seed', 'Series A', 'Series B+'];
-const SECTORS = [
-  'SaaS',
-  'Fintech',
-  'HealthTech',
-  'EdTech',
-  'AI/ML',
-  'E-commerce',
-  'CleanTech',
-  'DeepTech',
-  'Consumer',
-  'Enterprise',
-  'Marketplace',
-  'Crypto/Web3',
-];
-const GEOGRAPHIES = [
-  'United States',
-  'Europe',
-  'United Kingdom',
-  'Middle East',
-  'Southeast Asia',
-  'India',
-  'Africa',
-  'Latin America',
-  'Global',
-];
-
 const PAGE_SIZE = 12;
+
+// Lookup maps for displaying labels from DB values
+const TYPE_LABELS = Object.fromEntries(VC_TYPES.map((t) => [t.value, t.label]));
+const STAGE_LABELS = Object.fromEntries(STAGE_OPTIONS.map((s) => [s.value, s.label]));
+const SECTOR_LABELS = Object.fromEntries(SECTOR_OPTIONS.map((s) => [s.value, s.label]));
+const GEO_LABELS = Object.fromEntries(GEO_OPTIONS.map((g) => [g.value, g.label]));
 
 interface VCFirm {
   id: string;
@@ -124,8 +108,6 @@ export default function DiscoverPage() {
   const [selectedStages, setSelectedStages] = useState<string[]>([]);
   const [selectedSectors, setSelectedSectors] = useState<string[]>([]);
   const [selectedGeo, setSelectedGeo] = useState<string[]>([]);
-  const [checkMin, setCheckMin] = useState('');
-  const [checkMax, setCheckMax] = useState('');
   const [sortBy, setSortBy] = useState('relevance');
   const [page, setPage] = useState(1);
 
@@ -201,14 +183,6 @@ export default function DiscoverPage() {
       query = query.overlaps('geographies', selectedGeo);
     }
 
-    if (checkMin) {
-      query = query.gte('check_size_max', parseInt(checkMin));
-    }
-
-    if (checkMax) {
-      query = query.lte('check_size_min', parseInt(checkMax));
-    }
-
     if (sortBy === 'name_asc') {
       query = query.order('name', { ascending: true });
     } else if (sortBy === 'recent') {
@@ -236,8 +210,6 @@ export default function DiscoverPage() {
     selectedStages,
     selectedSectors,
     selectedGeo,
-    checkMin,
-    checkMax,
     sortBy,
     page,
   ]);
@@ -290,8 +262,6 @@ export default function DiscoverPage() {
     setSelectedStages([]);
     setSelectedSectors([]);
     setSelectedGeo([]);
-    setCheckMin('');
-    setCheckMax('');
     setPage(1);
   }
 
@@ -299,9 +269,7 @@ export default function DiscoverPage() {
     selectedTypes.length > 0 ||
     selectedStages.length > 0 ||
     selectedSectors.length > 0 ||
-    selectedGeo.length > 0 ||
-    checkMin !== '' ||
-    checkMax !== '';
+    selectedGeo.length > 0;
 
   const totalPages = Math.ceil(totalCount / PAGE_SIZE);
 
@@ -309,19 +277,19 @@ export default function DiscoverPage() {
     <div className="space-y-6">
       {/* Type */}
       <div>
-        <h4 className="mb-3 text-sm font-semibold text-gray-900">Type</h4>
+        <h4 className="mb-3 text-sm font-semibold text-foreground">Type</h4>
         <div className="space-y-2">
-          {TYPES.map((t) => (
-            <div key={t} className="flex items-center gap-2">
+          {VC_TYPES.map((t) => (
+            <div key={t.value} className="flex items-center gap-2">
               <Checkbox
-                id={`type-${t}`}
-                checked={selectedTypes.includes(t)}
+                id={`type-${t.value}`}
+                checked={selectedTypes.includes(t.value)}
                 onCheckedChange={() =>
-                  toggleFilter(t, selectedTypes, setSelectedTypes)
+                  toggleFilter(t.value, selectedTypes, setSelectedTypes)
                 }
               />
-              <Label htmlFor={`type-${t}`} className="text-sm font-normal cursor-pointer">
-                {t}
+              <Label htmlFor={`type-${t.value}`} className="text-sm font-normal cursor-pointer">
+                {t.label}
               </Label>
             </div>
           ))}
@@ -330,19 +298,19 @@ export default function DiscoverPage() {
 
       {/* Stage */}
       <div>
-        <h4 className="mb-3 text-sm font-semibold text-gray-900">Stage</h4>
+        <h4 className="mb-3 text-sm font-semibold text-foreground">Stage</h4>
         <div className="space-y-2">
-          {STAGES.map((s) => (
-            <div key={s} className="flex items-center gap-2">
+          {STAGE_OPTIONS.map((s) => (
+            <div key={s.value} className="flex items-center gap-2">
               <Checkbox
-                id={`stage-${s}`}
-                checked={selectedStages.includes(s)}
+                id={`stage-${s.value}`}
+                checked={selectedStages.includes(s.value)}
                 onCheckedChange={() =>
-                  toggleFilter(s, selectedStages, setSelectedStages)
+                  toggleFilter(s.value, selectedStages, setSelectedStages)
                 }
               />
-              <Label htmlFor={`stage-${s}`} className="text-sm font-normal cursor-pointer">
-                {s}
+              <Label htmlFor={`stage-${s.value}`} className="text-sm font-normal cursor-pointer">
+                {s.label}
               </Label>
             </div>
           ))}
@@ -351,19 +319,19 @@ export default function DiscoverPage() {
 
       {/* Sector */}
       <div>
-        <h4 className="mb-3 text-sm font-semibold text-gray-900">Sector</h4>
+        <h4 className="mb-3 text-sm font-semibold text-foreground">Sector</h4>
         <div className="space-y-2">
-          {SECTORS.map((s) => (
-            <div key={s} className="flex items-center gap-2">
+          {SECTOR_OPTIONS.map((s) => (
+            <div key={s.value} className="flex items-center gap-2">
               <Checkbox
-                id={`sector-${s}`}
-                checked={selectedSectors.includes(s)}
+                id={`sector-${s.value}`}
+                checked={selectedSectors.includes(s.value)}
                 onCheckedChange={() =>
-                  toggleFilter(s, selectedSectors, setSelectedSectors)
+                  toggleFilter(s.value, selectedSectors, setSelectedSectors)
                 }
               />
-              <Label htmlFor={`sector-${s}`} className="text-sm font-normal cursor-pointer">
-                {s}
+              <Label htmlFor={`sector-${s.value}`} className="text-sm font-normal cursor-pointer">
+                {s.label}
               </Label>
             </div>
           ))}
@@ -372,50 +340,22 @@ export default function DiscoverPage() {
 
       {/* Geography */}
       <div>
-        <h4 className="mb-3 text-sm font-semibold text-gray-900">Geography</h4>
+        <h4 className="mb-3 text-sm font-semibold text-foreground">Geography</h4>
         <div className="space-y-2">
-          {GEOGRAPHIES.map((g) => (
-            <div key={g} className="flex items-center gap-2">
+          {GEO_OPTIONS.map((g) => (
+            <div key={g.value} className="flex items-center gap-2">
               <Checkbox
-                id={`geo-${g}`}
-                checked={selectedGeo.includes(g)}
+                id={`geo-${g.value}`}
+                checked={selectedGeo.includes(g.value)}
                 onCheckedChange={() =>
-                  toggleFilter(g, selectedGeo, setSelectedGeo)
+                  toggleFilter(g.value, selectedGeo, setSelectedGeo)
                 }
               />
-              <Label htmlFor={`geo-${g}`} className="text-sm font-normal cursor-pointer">
-                {g}
+              <Label htmlFor={`geo-${g.value}`} className="text-sm font-normal cursor-pointer">
+                {g.label}
               </Label>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Check size */}
-      <div>
-        <h4 className="mb-3 text-sm font-semibold text-gray-900">Check Size (USD)</h4>
-        <div className="flex items-center gap-2">
-          <Input
-            type="number"
-            placeholder="Min"
-            value={checkMin}
-            onChange={(e) => {
-              setCheckMin(e.target.value);
-              setPage(1);
-            }}
-            className="w-full"
-          />
-          <span className="text-gray-400">-</span>
-          <Input
-            type="number"
-            placeholder="Max"
-            value={checkMax}
-            onChange={(e) => {
-              setCheckMax(e.target.value);
-              setPage(1);
-            }}
-            className="w-full"
-          />
         </div>
       </div>
 
@@ -436,15 +376,15 @@ export default function DiscoverPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Discover VCs</h1>
-        <p className="mt-1 text-gray-500">
+        <h1 className="text-2xl font-bold text-foreground">Discover VCs</h1>
+        <p className="mt-1 text-muted-foreground">
           Find the right investors for your startup.
         </p>
       </div>
 
       {/* Search bar */}
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
+        <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
         <Input
           type="text"
           placeholder="Search VCs by name..."
@@ -457,8 +397,8 @@ export default function DiscoverPage() {
       <div className="flex gap-6">
         {/* Desktop filters */}
         <aside className="hidden w-64 shrink-0 lg:block">
-          <div className="sticky top-0 rounded-lg border bg-white p-4">
-            <h3 className="mb-4 font-semibold text-gray-900">Filters</h3>
+          <div className="sticky top-0 rounded-lg border bg-card p-4">
+            <h3 className="mb-4 font-semibold text-foreground">Filters</h3>
             {filtersContent}
           </div>
         </aside>
@@ -471,13 +411,11 @@ export default function DiscoverPage() {
                 <SlidersHorizontal className="mr-2 h-4 w-4" />
                 Filters
                 {hasFilters && (
-                  <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-white text-xs font-bold text-indigo-600">
+                  <span className="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary-foreground text-xs font-bold text-primary">
                     {selectedTypes.length +
                       selectedStages.length +
                       selectedSectors.length +
-                      selectedGeo.length +
-                      (checkMin ? 1 : 0) +
-                      (checkMax ? 1 : 0)}
+                      selectedGeo.length}
                   </span>
                 )}
               </Button>
@@ -495,7 +433,7 @@ export default function DiscoverPage() {
         <div className="flex-1 min-w-0">
           {/* Toolbar */}
           <div className="mb-4 flex items-center justify-between">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-muted-foreground">
               {loading ? 'Loading...' : `${totalCount} result${totalCount !== 1 ? 's' : ''}`}
             </p>
             <Select value={sortBy} onValueChange={(v) => { setSortBy(v); setPage(1); }}>
@@ -551,11 +489,11 @@ export default function DiscoverPage() {
                           {getInitials(vc.name)}
                         </div>
                         <div className="min-w-0">
-                          <h3 className="truncate font-semibold text-gray-900">
+                          <h3 className="truncate font-semibold text-foreground">
                             {vc.name}
                           </h3>
                           <Badge variant="secondary" className="mt-0.5 text-xs">
-                            {vc.type}
+                            {TYPE_LABELS[vc.type] || vc.type}
                           </Badge>
                         </div>
                       </div>
@@ -569,7 +507,7 @@ export default function DiscoverPage() {
                           className={`h-5 w-5 ${
                             savedIds.has(vc.id)
                               ? 'fill-red-500 text-red-500'
-                              : 'text-gray-300 hover:text-red-400'
+                              : 'text-muted-foreground/50 hover:text-red-400'
                           }`}
                         />
                       </button>
@@ -581,9 +519,9 @@ export default function DiscoverPage() {
                         {vc.investment_stages.map((stage) => (
                           <span
                             key={stage}
-                            className="inline-flex rounded-full bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700"
+                            className="inline-flex rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary"
                           >
-                            {stage}
+                            {STAGE_LABELS[stage] || stage}
                           </span>
                         ))}
                       </div>
@@ -595,13 +533,13 @@ export default function DiscoverPage() {
                         {vc.sectors.slice(0, 3).map((sector) => (
                           <span
                             key={sector}
-                            className="inline-flex rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600"
+                            className="inline-flex rounded-full bg-secondary px-2 py-0.5 text-xs text-secondary-foreground"
                           >
-                            {sector}
+                            {SECTOR_LABELS[sector] || sector}
                           </span>
                         ))}
                         {vc.sectors.length > 3 && (
-                          <span className="inline-flex rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">
+                          <span className="inline-flex rounded-full bg-secondary px-2 py-0.5 text-xs text-secondary-foreground">
                             +{vc.sectors.length - 3}
                           </span>
                         )}
@@ -609,7 +547,7 @@ export default function DiscoverPage() {
                     )}
 
                     {/* Bottom row */}
-                    <div className="mt-3 flex items-center justify-between border-t pt-3 text-xs text-gray-500">
+                    <div className="mt-3 flex items-center justify-between border-t pt-3 text-xs text-muted-foreground">
                       <span className="font-medium">
                         {vc.check_size_min !== null || vc.check_size_max !== null
                           ? `${formatAmount(vc.check_size_min)} - ${formatAmount(vc.check_size_max)}`
@@ -631,11 +569,11 @@ export default function DiscoverPage() {
           {/* Empty state */}
           {!loading && vcs.length === 0 && (
             <div className="flex flex-col items-center justify-center rounded-lg border border-dashed py-16 text-center">
-              <Search className="h-12 w-12 text-gray-300" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">
+              <Search className="h-12 w-12 text-muted-foreground/50" />
+              <h3 className="mt-4 text-lg font-semibold text-foreground">
                 No VCs found
               </h3>
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-muted-foreground">
                 Try adjusting your search or filters.
               </p>
               {hasFilters && (

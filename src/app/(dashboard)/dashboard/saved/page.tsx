@@ -63,10 +63,10 @@ const STATUS_OPTIONS = [
 ];
 
 const statusColors: Record<string, string> = {
-  saved: 'bg-blue-100 text-blue-700',
-  contacted: 'bg-yellow-100 text-yellow-700',
-  in_conversation: 'bg-green-100 text-green-700',
-  passed: 'bg-gray-100 text-gray-700',
+  saved: 'bg-blue-900/30 text-blue-300',
+  contacted: 'bg-yellow-900/30 text-yellow-300',
+  in_conversation: 'bg-green-900/30 text-green-300',
+  passed: 'bg-secondary text-secondary-foreground',
 };
 
 function getInitials(name: string) {
@@ -187,8 +187,8 @@ export default function SavedVCsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Saved VCs</h1>
-        <p className="mt-1 text-gray-500">
+        <h1 className="text-2xl font-bold text-foreground">Saved VCs</h1>
+        <p className="mt-1 text-muted-foreground">
           Manage your shortlisted investors and track conversations.
         </p>
       </div>
@@ -204,8 +204,8 @@ export default function SavedVCsPage() {
             }}
             className={`rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
               activeTab === tab.value
-                ? 'bg-indigo-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                ? 'bg-primary text-primary-foreground'
+                : 'bg-secondary text-secondary-foreground hover:bg-accent'
             }`}
           >
             {tab.label}
@@ -233,13 +233,13 @@ export default function SavedVCsPage() {
       {/* Empty state */}
       {!loading && items.length === 0 && (
         <div className="flex flex-col items-center justify-center rounded-lg border border-dashed py-16 text-center">
-          <Bookmark className="h-12 w-12 text-gray-300" />
-          <h3 className="mt-4 text-lg font-semibold text-gray-900">
+          <Bookmark className="h-12 w-12 text-muted-foreground/50" />
+          <h3 className="mt-4 text-lg font-semibold text-foreground">
             {activeTab === 'all'
               ? 'No saved VCs yet'
               : `No VCs with status "${activeTab.replace('_', ' ')}"`}
           </h3>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-muted-foreground">
             Discover and save VCs that match your startup.
           </p>
           <Button asChild className="mt-4">
@@ -261,7 +261,7 @@ export default function SavedVCsPage() {
             return (
               <Card
                 key={item.id}
-                className={`transition-shadow ${isExpanded ? 'ring-2 ring-indigo-200' : ''}`}
+                className={`transition-shadow ${isExpanded ? 'ring-2 ring-primary/30' : ''}`}
               >
                 <CardContent className="p-0">
                   {/* Main row */}
@@ -269,19 +269,19 @@ export default function SavedVCsPage() {
                     onClick={() => handleExpand(item)}
                     className="flex w-full items-center gap-4 p-4 text-left"
                   >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                       {firm?.name ? getInitials(firm.name) : <Building2 className="h-5 w-5" />}
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2">
-                        <p className="truncate font-semibold text-gray-900">
+                        <p className="truncate font-semibold text-foreground">
                           {firm?.name ?? 'Unknown'}
                         </p>
                         <Badge variant="outline" className="text-xs shrink-0">
                           {firm?.type ?? ''}
                         </Badge>
                       </div>
-                      <div className="mt-0.5 flex items-center gap-3 text-xs text-gray-500">
+                      <div className="mt-0.5 flex items-center gap-3 text-xs text-muted-foreground">
                         {firm?.headquarters && (
                           <span>{firm.headquarters}</span>
                         )}
@@ -291,7 +291,7 @@ export default function SavedVCsPage() {
                         </span>
                       </div>
                       {item.notes && !isExpanded && (
-                        <p className="mt-1 truncate text-xs text-gray-400">
+                        <p className="mt-1 truncate text-xs text-muted-foreground">
                           <MessageSquare className="mr-1 inline h-3 w-3" />
                           {item.notes}
                         </p>
@@ -303,9 +303,9 @@ export default function SavedVCsPage() {
                       {item.status.replace('_', ' ')}
                     </Badge>
                     {isExpanded ? (
-                      <ChevronUp className="h-4 w-4 shrink-0 text-gray-400" />
+                      <ChevronUp className="h-4 w-4 shrink-0 text-muted-foreground" />
                     ) : (
-                      <ChevronDown className="h-4 w-4 shrink-0 text-gray-400" />
+                      <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
                     )}
                   </button>
 
@@ -315,14 +315,14 @@ export default function SavedVCsPage() {
                       {/* Stages and sectors */}
                       {firm?.investment_stages && firm.investment_stages.length > 0 && (
                         <div>
-                          <p className="text-xs font-medium text-gray-500 mb-1">
+                          <p className="text-xs font-medium text-muted-foreground mb-1">
                             Investment Stages
                           </p>
                           <div className="flex flex-wrap gap-1">
                             {firm.investment_stages.map((s: string) => (
                               <span
                                 key={s}
-                                className="rounded-full bg-indigo-50 px-2 py-0.5 text-xs text-indigo-700"
+                                className="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary"
                               >
                                 {s}
                               </span>
@@ -333,14 +333,14 @@ export default function SavedVCsPage() {
 
                       {firm?.sectors && firm.sectors.length > 0 && (
                         <div>
-                          <p className="text-xs font-medium text-gray-500 mb-1">
+                          <p className="text-xs font-medium text-muted-foreground mb-1">
                             Sectors
                           </p>
                           <div className="flex flex-wrap gap-1">
                             {firm.sectors.map((s: string) => (
                               <span
                                 key={s}
-                                className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600"
+                                className="rounded-full bg-secondary px-2 py-0.5 text-xs text-secondary-foreground"
                               >
                                 {s}
                               </span>
@@ -351,7 +351,7 @@ export default function SavedVCsPage() {
 
                       {/* Status dropdown */}
                       <div>
-                        <p className="text-xs font-medium text-gray-500 mb-1">
+                        <p className="text-xs font-medium text-muted-foreground mb-1">
                           Status
                         </p>
                         <Select
@@ -373,7 +373,7 @@ export default function SavedVCsPage() {
 
                       {/* Notes */}
                       <div>
-                        <p className="text-xs font-medium text-gray-500 mb-1">
+                        <p className="text-xs font-medium text-muted-foreground mb-1">
                           Notes
                         </p>
                         <Textarea
@@ -403,7 +403,7 @@ export default function SavedVCsPage() {
                         {firm?.slug && (
                           <Link
                             href={`/vc/${firm.slug}`}
-                            className="text-sm font-medium text-indigo-600 hover:text-indigo-700"
+                            className="text-sm font-medium text-primary hover:text-primary/80"
                             onClick={(e) => e.stopPropagation()}
                           >
                             View Profile →
@@ -413,7 +413,7 @@ export default function SavedVCsPage() {
                         <Button
                           variant="ghost"
                           size="sm"
-                          className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                          className="text-red-400 hover:text-red-300 hover:bg-red-950/30"
                           onClick={() => handleRemove(item.id)}
                         >
                           <Trash2 className="mr-1 h-4 w-4" />

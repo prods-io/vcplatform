@@ -234,7 +234,7 @@ export default function AdminPartnersPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b bg-gray-50/50">
+                <tr className="border-b bg-secondary/50">
                   <th className="px-4 py-3 text-left font-medium text-muted-foreground">
                     Name
                   </th>
@@ -258,7 +258,7 @@ export default function AdminPartnersPage() {
                     <tr key={i} className="border-b">
                       {Array.from({ length: 5 }).map((_, j) => (
                         <td key={j} className="px-4 py-3">
-                          <div className="h-4 w-24 animate-pulse rounded bg-gray-200" />
+                          <div className="h-4 w-24 animate-pulse rounded bg-secondary" />
                         </td>
                       ))}
                     </tr>
@@ -276,7 +276,7 @@ export default function AdminPartnersPage() {
                   partners.map((partner) => (
                     <tr
                       key={partner.id}
-                      className="border-b transition-colors hover:bg-gray-50/50"
+                      className="border-b transition-colors hover:bg-secondary/50"
                     >
                       <td className="px-4 py-3 font-medium">{partner.name}</td>
                       <td className="px-4 py-3 text-muted-foreground">
@@ -344,7 +344,7 @@ export default function AdminPartnersPage() {
           </DialogHeader>
 
           {formError && (
-            <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+            <div className="rounded-lg border border-border bg-red-900/30 px-4 py-3 text-sm text-red-400">
               {formError}
             </div>
           )}

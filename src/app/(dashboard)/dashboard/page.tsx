@@ -84,22 +84,22 @@ export default async function DashboardPage() {
       label: 'Saved VCs',
       value: savedCount?.toString() ?? '0',
       icon: Bookmark,
-      color: 'text-indigo-600',
-      bg: 'bg-indigo-50',
+      color: 'text-primary',
+      bg: 'bg-primary/10',
     },
     {
       label: 'Profile Views',
       value: '--',
       icon: Eye,
-      color: 'text-green-600',
-      bg: 'bg-green-50',
+      color: 'text-green-400',
+      bg: 'bg-green-900/30',
     },
     {
       label: 'Pitch Score',
       value: pitchScore !== null ? `${pitchScore}/100` : 'N/A',
       icon: Target,
-      color: pitchScore !== null && pitchScore >= 70 ? 'text-green-600' : pitchScore !== null && pitchScore >= 50 ? 'text-yellow-600' : 'text-gray-600',
-      bg: pitchScore !== null && pitchScore >= 70 ? 'bg-green-50' : pitchScore !== null && pitchScore >= 50 ? 'bg-yellow-50' : 'bg-gray-50',
+      color: pitchScore !== null && pitchScore >= 70 ? 'text-green-400' : pitchScore !== null && pitchScore >= 50 ? 'text-yellow-400' : 'text-muted-foreground',
+      bg: pitchScore !== null && pitchScore >= 70 ? 'bg-green-900/30' : pitchScore !== null && pitchScore >= 50 ? 'bg-yellow-900/30' : 'bg-secondary',
     },
   ];
 
@@ -116,17 +116,17 @@ export default async function DashboardPage() {
     saved: 'bg-blue-100 text-blue-700',
     contacted: 'bg-yellow-100 text-yellow-700',
     in_conversation: 'bg-green-100 text-green-700',
-    passed: 'bg-gray-100 text-gray-700',
+    passed: 'bg-secondary text-secondary-foreground',
   };
 
   return (
     <div className="space-y-8">
       {/* Greeting */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
+        <h1 className="text-2xl font-bold text-foreground md:text-3xl">
           Welcome back, {firstName}
         </h1>
-        <p className="mt-1 text-gray-500">
+        <p className="mt-1 text-muted-foreground">
           Here&apos;s what&apos;s happening with your fundraising journey.
         </p>
       </div>
@@ -144,8 +144,8 @@ export default async function DashboardPage() {
                   <Icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-500">{stat.label}</p>
-                  <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
+                  <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+                  <p className="text-2xl font-bold text-foreground">{stat.value}</p>
                 </div>
               </CardContent>
             </Card>
@@ -157,12 +157,12 @@ export default async function DashboardPage() {
       <div className="grid gap-4 sm:grid-cols-2">
         <Card className="border-dashed">
           <CardContent className="flex flex-col items-center justify-center gap-3 p-8 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-50">
-              <Search className="h-6 w-6 text-indigo-600" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+              <Search className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Discover VCs</h3>
-              <p className="mt-1 text-sm text-gray-500">
+              <h3 className="font-semibold text-foreground">Discover VCs</h3>
+              <p className="mt-1 text-sm text-muted-foreground">
                 Find investors that match your startup&apos;s stage, sector, and geography.
               </p>
             </div>
@@ -176,12 +176,12 @@ export default async function DashboardPage() {
 
         <Card className="border-dashed">
           <CardContent className="flex flex-col items-center justify-center gap-3 p-8 text-center">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-50">
-              <FileText className="h-6 w-6 text-green-600" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-900/30">
+              <FileText className="h-6 w-6 text-green-400" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Upload Pitch Deck</h3>
-              <p className="mt-1 text-sm text-gray-500">
+              <h3 className="font-semibold text-foreground">Upload Pitch Deck</h3>
+              <p className="mt-1 text-sm text-muted-foreground">
                 Get AI-powered feedback on your pitch deck and improve your score.
               </p>
             </div>
@@ -209,9 +209,9 @@ export default async function DashboardPage() {
         <CardContent>
           {!recentSaved || recentSaved.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-8 text-center">
-              <Bookmark className="h-10 w-10 text-gray-300" />
-              <p className="mt-3 text-sm font-medium text-gray-900">No saved VCs yet</p>
-              <p className="mt-1 text-sm text-gray-500">
+              <Bookmark className="h-10 w-10 text-muted-foreground/50" />
+              <p className="mt-3 text-sm font-medium text-foreground">No saved VCs yet</p>
+              <p className="mt-1 text-sm text-muted-foreground">
                 Start discovering and saving VCs that match your startup.
               </p>
               <Button asChild variant="outline" size="sm" className="mt-4">
@@ -225,16 +225,16 @@ export default async function DashboardPage() {
                 return (
                   <div
                     key={item.id}
-                    className="flex items-center gap-4 rounded-lg border p-3 transition-colors hover:bg-gray-50"
+                    className="flex items-center gap-4 rounded-lg border p-3 transition-colors hover:bg-accent"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                       {firm?.name ? getInitials(firm.name) : <Building2 className="h-5 w-5" />}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-medium text-gray-900">
+                      <p className="truncate font-medium text-foreground">
                         {firm?.name ?? 'Unknown'}
                       </p>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-muted-foreground">
                         {firm?.headquarters ?? 'Location unknown'}
                       </p>
                     </div>
@@ -244,7 +244,7 @@ export default async function DashboardPage() {
                     >
                       {item.status?.replace('_', ' ') ?? 'saved'}
                     </Badge>
-                    <p className="hidden text-xs text-gray-400 sm:block">
+                    <p className="hidden text-xs text-muted-foreground sm:block">
                       {new Date(item.created_at).toLocaleDateString()}
                     </p>
                   </div>

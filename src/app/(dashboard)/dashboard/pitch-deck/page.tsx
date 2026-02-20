@@ -227,13 +227,13 @@ export default function PitchDeckPage() {
   }
 
   function scoreColor(score: number): string {
-    if (score >= 70) return 'text-green-600';
-    if (score >= 50) return 'text-yellow-600';
+    if (score >= 70) return 'text-green-400';
+    if (score >= 50) return 'text-yellow-400';
     return 'text-red-600';
   }
 
   function scoreBgColor(score: number): string {
-    if (score >= 70) return 'bg-green-500';
+    if (score >= 70) return 'bg-green-900/300';
     if (score >= 50) return 'bg-yellow-500';
     return 'bg-red-500';
   }
@@ -243,13 +243,13 @@ export default function PitchDeckPage() {
       <div className="space-y-6">
         {/* Score */}
         <div className="flex flex-col items-center text-center">
-          <p className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
             Overall Score
           </p>
           <p className={`text-6xl font-bold ${scoreColor(analysis.score ?? 0)}`}>
             {analysis.score ?? 0}
           </p>
-          <p className="text-sm text-gray-500">/100</p>
+          <p className="text-sm text-muted-foreground">/100</p>
           <div className="mt-3 w-full max-w-xs">
             <Progress
               value={analysis.score ?? 0}
@@ -270,7 +270,7 @@ export default function PitchDeckPage() {
             <CardContent>
               <ul className="space-y-2">
                 {(analysis.strengths ?? []).map((s, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
                     {s}
                   </li>
@@ -290,7 +290,7 @@ export default function PitchDeckPage() {
             <CardContent>
               <ul className="space-y-2">
                 {(analysis.improvements ?? []).map((s, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                  <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
                     <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-yellow-500" />
                     {s}
                   </li>
@@ -309,11 +309,11 @@ export default function PitchDeckPage() {
             </CardHeader>
             <CardContent>
               {(analysis.missing_sections ?? []).length === 0 ? (
-                <p className="text-sm text-gray-500">No missing sections detected.</p>
+                <p className="text-sm text-muted-foreground">No missing sections detected.</p>
               ) : (
                 <ul className="space-y-2">
                   {(analysis.missing_sections ?? []).map((s, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground/80">
                       <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-red-500" />
                       {s}
                     </li>
@@ -339,7 +339,7 @@ export default function PitchDeckPage() {
                         <AccordionTrigger className="text-sm font-medium">
                           {section}
                         </AccordionTrigger>
-                        <AccordionContent className="text-sm text-gray-600">
+                        <AccordionContent className="text-sm text-muted-foreground">
                           {suggestion}
                         </AccordionContent>
                       </AccordionItem>
@@ -355,12 +355,12 @@ export default function PitchDeckPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <BarChart3 className="h-5 w-5 text-indigo-600" />
+                <BarChart3 className="h-5 w-5 text-primary" />
                 VC Readiness Assessment
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-sm text-foreground/80 leading-relaxed">
                 {analysis.vc_readiness}
               </p>
             </CardContent>
@@ -373,8 +373,8 @@ export default function PitchDeckPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Pitch Deck Analyzer</h1>
-        <p className="mt-1 text-gray-500">
+        <h1 className="text-2xl font-bold text-foreground">Pitch Deck Analyzer</h1>
+        <p className="mt-1 text-muted-foreground">
           Upload your pitch deck and get AI-powered feedback to improve your fundraising.
         </p>
       </div>
@@ -388,17 +388,17 @@ export default function PitchDeckPage() {
             onDrop={handleDrop}
             className={`flex flex-col items-center justify-center rounded-lg border-2 border-dashed p-10 transition-colors ${
               dragOver
-                ? 'border-indigo-400 bg-indigo-50'
+                ? 'border-indigo-400 bg-primary/10'
                 : file
-                ? 'border-green-300 bg-green-50'
-                : 'border-gray-300 bg-gray-50 hover:border-gray-400'
+                ? 'border-green-300 bg-green-900/30'
+                : 'border-border bg-secondary hover:border-primary/50'
             }`}
           >
             {file ? (
               <>
                 <FileText className="h-12 w-12 text-green-500" />
-                <p className="mt-3 font-medium text-gray-900">{file.name}</p>
-                <p className="text-sm text-gray-500">
+                <p className="mt-3 font-medium text-foreground">{file.name}</p>
+                <p className="text-sm text-muted-foreground">
                   {(file.size / (1024 * 1024)).toFixed(2)} MB
                 </p>
                 <div className="mt-4 flex items-center gap-3">
@@ -425,11 +425,11 @@ export default function PitchDeckPage() {
               </>
             ) : (
               <>
-                <Upload className="h-12 w-12 text-gray-400" />
-                <p className="mt-3 font-medium text-gray-900">
+                <Upload className="h-12 w-12 text-muted-foreground" />
+                <p className="mt-3 font-medium text-foreground">
                   Drag and drop your pitch deck here
                 </p>
-                <p className="text-sm text-gray-500">PDF files only, up to 20MB</p>
+                <p className="text-sm text-muted-foreground">PDF files only, up to 20MB</p>
                 <label className="mt-4">
                   <Button variant="outline" asChild>
                     <span className="cursor-pointer">
@@ -451,8 +451,8 @@ export default function PitchDeckPage() {
           {(uploading || analyzing) && analyzeProgress > 0 && (
             <div className="mt-4 space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600">{analyzeMessage}</span>
-                <span className="font-medium text-gray-900">
+                <span className="text-muted-foreground">{analyzeMessage}</span>
+                <span className="font-medium text-foreground">
                   {Math.round(analyzeProgress)}%
                 </span>
               </div>
@@ -465,7 +465,7 @@ export default function PitchDeckPage() {
       {/* Current analysis results */}
       {currentAnalysis && (
         <div>
-          <h2 className="mb-4 text-lg font-semibold text-gray-900">
+          <h2 className="mb-4 text-lg font-semibold text-foreground">
             Latest Analysis: {currentAnalysis.file_name}
           </h2>
           {renderAnalysis(currentAnalysis)}
@@ -474,7 +474,7 @@ export default function PitchDeckPage() {
 
       {/* Previous analyses */}
       <div>
-        <h2 className="mb-4 text-lg font-semibold text-gray-900">
+        <h2 className="mb-4 text-lg font-semibold text-foreground">
           Previous Analyses
         </h2>
 
@@ -498,9 +498,9 @@ export default function PitchDeckPage() {
         {!loading && previousAnalyses.length === 0 && !currentAnalysis && (
           <Card>
             <CardContent className="flex flex-col items-center justify-center py-12 text-center">
-              <FileText className="h-12 w-12 text-gray-300" />
-              <p className="mt-3 font-medium text-gray-900">No analyses yet</p>
-              <p className="mt-1 text-sm text-gray-500">
+              <FileText className="h-12 w-12 text-muted-foreground/50" />
+              <p className="mt-3 font-medium text-foreground">No analyses yet</p>
+              <p className="mt-1 text-sm text-muted-foreground">
                 Upload your pitch deck above to get started.
               </p>
             </CardContent>
@@ -523,10 +523,10 @@ export default function PitchDeckPage() {
                       {analysis.score ?? 0}
                     </div>
                     <div>
-                      <p className="font-medium text-gray-900">
+                      <p className="font-medium text-foreground">
                         {analysis.file_name}
                       </p>
-                      <p className="flex items-center gap-1 text-xs text-gray-500">
+                      <p className="flex items-center gap-1 text-xs text-muted-foreground">
                         <Clock className="h-3 w-3" />
                         {new Date(analysis.created_at).toLocaleDateString()} at{' '}
                         {new Date(analysis.created_at).toLocaleTimeString([], {

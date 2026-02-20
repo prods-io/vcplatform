@@ -128,8 +128,8 @@ export default function ProfilePage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Profile</h1>
-        <p className="mt-1 text-gray-500">
+        <h1 className="text-2xl font-bold text-foreground">Profile</h1>
+        <p className="mt-1 text-muted-foreground">
           Manage your personal information and preferences.
         </p>
       </div>
@@ -137,7 +137,7 @@ export default function ProfilePage() {
       <Card className="max-w-2xl">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-base">
-            <User className="h-5 w-5 text-indigo-600" />
+            <User className="h-5 w-5 text-primary" />
             Personal Information
           </CardTitle>
         </CardHeader>
@@ -148,16 +148,16 @@ export default function ProfilePage() {
               <img
                 src={profile.avatar_url}
                 alt={profile.full_name}
-                className="h-24 w-24 rounded-full object-cover border-4 border-gray-100"
+                className="h-24 w-24 rounded-full object-cover border-4 border-border"
               />
             ) : (
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-indigo-100 text-2xl font-bold text-indigo-700 border-4 border-gray-100">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-2xl font-bold text-primary border-4 border-border">
                 {profile.full_name
                   ? getInitials(profile.full_name)
                   : '?'}
               </div>
             )}
-            <p className="text-lg font-semibold text-gray-900">
+            <p className="text-lg font-semibold text-foreground">
               {profile.full_name || 'Your Name'}
             </p>
           </div>
@@ -182,9 +182,9 @@ export default function ProfilePage() {
               value={profile.email}
               disabled
               readOnly
-              className="mt-1 bg-gray-50 text-gray-500"
+              className="mt-1 bg-secondary text-muted-foreground"
             />
-            <p className="mt-1 text-xs text-gray-400">
+            <p className="mt-1 text-xs text-muted-foreground">
               Email cannot be changed here.
             </p>
           </div>
@@ -212,7 +212,7 @@ export default function ProfilePage() {
               rows={4}
               className="mt-1"
             />
-            <p className="mt-1 text-xs text-gray-400">
+            <p className="mt-1 text-xs text-muted-foreground">
               {profile.bio.length}/500 characters
             </p>
           </div>

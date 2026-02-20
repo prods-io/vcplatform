@@ -96,7 +96,9 @@ export async function POST(request: NextRequest) {
       type: vc.type ?? 'vc',
       investment_stages: vc.stages ?? vc.investment_stages ?? [],
       sectors: vc.sectors ?? [],
-      geographies: vc.geographies ?? [],
+      geographies: (vc.geographies ?? []).map((g: string) =>
+        g.toLowerCase().replace(/\s+/g, '_')
+      ),
       check_size_min: vc.check_size_min ?? null,
       check_size_max: vc.check_size_max ?? null,
       fund_size: vc.total_fund_size ?? vc.fund_size ?? null,

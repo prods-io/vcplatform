@@ -41,21 +41,21 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const startup = await getStartup(params.slug);
   if (!startup) {
-    return { title: "Startup Not Found - VCConnect" };
+    return { title: "Startup Not Found - CapConnect" };
   }
 
   return {
-    title: `${startup.name} - VCConnect`,
+    title: `${startup.name} - CapConnect`,
     description:
       startup.tagline ||
       startup.description?.slice(0, 160) ||
-      `Learn about ${startup.name} on VCConnect.`,
+      `Learn about ${startup.name} on CapConnect.`,
     openGraph: {
-      title: `${startup.name} - VCConnect`,
+      title: `${startup.name} - CapConnect`,
       description:
         startup.tagline ||
         startup.description?.slice(0, 160) ||
-        `Learn about ${startup.name} on VCConnect.`,
+        `Learn about ${startup.name} on CapConnect.`,
     },
   };
 }

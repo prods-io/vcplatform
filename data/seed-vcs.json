@@ -7,9 +7,18 @@
     "website": "https://blume.vc",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["fintech", "saas", "healthtech"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "fintech",
+      "saas",
+      "healthtech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 25000,
     "check_size_max": 2000000,
     "sweet_spot": 500000,
@@ -22,8 +31,18 @@
     "twitter_url": "https://twitter.com/BlumeVentures",
     "is_active": true,
     "data_quality_score": 92,
-    "notable_investments": ["Unacademy", "Slice", "Grey Orange", "Purplle", "Turtlemint"],
-    "partners": ["Karthik Reddy", "Sanjay Nath", "Ashish Fafadia"]
+    "notable_investments": [
+      "Unacademy",
+      "Slice",
+      "Grey Orange",
+      "Purplle",
+      "Turtlemint"
+    ],
+    "partners": [
+      "Karthik Reddy",
+      "Sanjay Nath",
+      "Ashish Fafadia"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440002",
@@ -33,9 +52,18 @@
     "website": "https://kalaari.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["consumer", "saas", "healthtech"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "consumer",
+      "saas",
+      "healthtech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 500000,
     "check_size_max": 10000000,
     "sweet_spot": 3000000,
@@ -48,8 +76,17 @@
     "twitter_url": "https://twitter.com/KalaariCapital",
     "is_active": true,
     "data_quality_score": 90,
-    "notable_investments": ["Dream11", "Myntra", "CureFit", "Snap Deal", "Zivame"],
-    "partners": ["Vani Kola", "Rajesh Raju"]
+    "notable_investments": [
+      "Dream11",
+      "Myntra",
+      "CureFit",
+      "Snap Deal",
+      "Zivame"
+    ],
+    "partners": [
+      "Vani Kola",
+      "Rajesh Raju"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440003",
@@ -59,9 +96,19 @@
     "website": "https://nexusvp.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["fintech", "enterprise", "saas"],
-    "geographies": ["India", "US"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "enterprise",
+      "saas"
+    ],
+    "geographies": [
+      "india",
+      "us"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 15000000,
     "sweet_spot": 5000000,
@@ -74,8 +121,18 @@
     "twitter_url": "https://twitter.com/nexusvp",
     "is_active": true,
     "data_quality_score": 93,
-    "notable_investments": ["Delhivery", "Postman", "Druva", "Unacademy", "Rapido"],
-    "partners": ["Pratik Poddar", "Suvir Sujan", "Sameer Brij Verma"]
+    "notable_investments": [
+      "Delhivery",
+      "Postman",
+      "Druva",
+      "Unacademy",
+      "Rapido"
+    ],
+    "partners": [
+      "Pratik Poddar",
+      "Suvir Sujan",
+      "Sameer Brij Verma"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440004",
@@ -85,9 +142,19 @@
     "website": "https://accel.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a", "series_b_plus"],
-    "sectors": ["saas", "consumer", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 100000000,
     "sweet_spot": 10000000,
@@ -100,8 +167,19 @@
     "twitter_url": "https://twitter.com/Accel_India",
     "is_active": true,
     "data_quality_score": 95,
-    "notable_investments": ["Flipkart", "Swiggy", "Freshworks", "BrowserStack", "Mensa Brands"],
-    "partners": ["Prashanth Prakash", "Subrata Mitra", "Anand Daniel", "Barath Shankar Subramanian"]
+    "notable_investments": [
+      "Flipkart",
+      "Swiggy",
+      "Freshworks",
+      "BrowserStack",
+      "Mensa Brands"
+    ],
+    "partners": [
+      "Prashanth Prakash",
+      "Subrata Mitra",
+      "Anand Daniel",
+      "Barath Shankar Subramanian"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440005",
@@ -111,9 +189,20 @@
     "website": "https://peakxv.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a", "series_b_plus"],
-    "sectors": ["consumer", "fintech", "healthtech"],
-    "geographies": ["India", "Southeast Asia"],
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech",
+      "healthtech"
+    ],
+    "geographies": [
+      "india",
+      "southeast_asia"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 100000000,
     "sweet_spot": 15000000,
@@ -126,8 +215,18 @@
     "twitter_url": "https://twitter.com/PeakXVPartners",
     "is_active": true,
     "data_quality_score": 95,
-    "notable_investments": ["Zomato", "BYJU'S", "OYO", "Razorpay", "Pine Labs"],
-    "partners": ["Shailendra Singh", "Rajan Anandan", "GV Ravishankar"]
+    "notable_investments": [
+      "Zomato",
+      "BYJU'S",
+      "OYO",
+      "Razorpay",
+      "Pine Labs"
+    ],
+    "partners": [
+      "Shailendra Singh",
+      "Rajan Anandan",
+      "GV Ravishankar"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440006",
@@ -137,9 +236,15 @@
     "website": "https://100x.vc",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 25000,
     "check_size_max": 250000,
     "sweet_spot": 100000,
@@ -152,8 +257,16 @@
     "twitter_url": "https://twitter.com/100aborhood",
     "is_active": true,
     "data_quality_score": 88,
-    "notable_investments": ["Filo", "Sense", "TapChief", "Teachmint"],
-    "partners": ["Sanjay Mehta", "Yagnesh Sanghrajka"]
+    "notable_investments": [
+      "Filo",
+      "Sense",
+      "TapChief",
+      "Teachmint"
+    ],
+    "partners": [
+      "Sanjay Mehta",
+      "Yagnesh Sanghrajka"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440007",
@@ -163,9 +276,17 @@
     "website": "https://www.titancapital.vc",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["consumer", "saas"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "consumer",
+      "saas"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 100000,
     "check_size_max": 1000000,
     "sweet_spot": 250000,
@@ -178,8 +299,16 @@
     "twitter_url": "https://twitter.com/titan_capital",
     "is_active": true,
     "data_quality_score": 85,
-    "notable_investments": ["Razorpay", "Mamaearth", "Spinny", "Uni Cards"],
-    "partners": ["Kunal Bahl", "Rohit Bansal"]
+    "notable_investments": [
+      "Razorpay",
+      "Mamaearth",
+      "Spinny",
+      "Uni Cards"
+    ],
+    "partners": [
+      "Kunal Bahl",
+      "Rohit Bansal"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440008",
@@ -189,9 +318,17 @@
     "website": "https://indiaquotient.in",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["consumer", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 100000,
     "check_size_max": 2000000,
     "sweet_spot": 500000,
@@ -204,8 +341,16 @@
     "twitter_url": "https://twitter.com/indiaquotient",
     "is_active": true,
     "data_quality_score": 87,
-    "notable_investments": ["ShareChat", "Dunzo", "Sugar Cosmetics", "Bijak"],
-    "partners": ["Anand Lunia", "Madhukar Sinha"]
+    "notable_investments": [
+      "ShareChat",
+      "Dunzo",
+      "Sugar Cosmetics",
+      "Bijak"
+    ],
+    "partners": [
+      "Anand Lunia",
+      "Madhukar Sinha"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440009",
@@ -215,9 +360,18 @@
     "website": "https://chiratae.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["saas", "healthtech", "deeptech"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "healthtech",
+      "deeptech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 10000000,
     "sweet_spot": 3000000,
@@ -230,8 +384,18 @@
     "twitter_url": "https://twitter.com/ChirataeVP",
     "is_active": true,
     "data_quality_score": 89,
-    "notable_investments": ["Myntra", "Lenskart", "Firstcry", "Curefit", "PolicyBazaar"],
-    "partners": ["Sudhir Sethi", "TC Meenakshi Sundaram", "Venkatesh Peddi"]
+    "notable_investments": [
+      "Myntra",
+      "Lenskart",
+      "Firstcry",
+      "Curefit",
+      "PolicyBazaar"
+    ],
+    "partners": [
+      "Sudhir Sethi",
+      "TC Meenakshi Sundaram",
+      "Venkatesh Peddi"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440010",
@@ -241,9 +405,18 @@
     "website": "https://z47.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["consumer", "fintech", "saas"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech",
+      "saas"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 15000000,
     "sweet_spot": 5000000,
@@ -256,8 +429,18 @@
     "twitter_url": "https://twitter.com/Z47ventures",
     "is_active": true,
     "data_quality_score": 91,
-    "notable_investments": ["Ola", "Razorpay", "OfBusiness", "Country Delight", "Mosaic Wellness"],
-    "partners": ["Avnish Bajaj", "Tarun Davda", "Vikram Vaidyanathan"]
+    "notable_investments": [
+      "Ola",
+      "Razorpay",
+      "OfBusiness",
+      "Country Delight",
+      "Mosaic Wellness"
+    ],
+    "partners": [
+      "Avnish Bajaj",
+      "Tarun Davda",
+      "Vikram Vaidyanathan"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440011",
@@ -267,9 +450,19 @@
     "website": "https://elevationcapital.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a", "series_b_plus"],
-    "sectors": ["consumer", "fintech", "saas"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech",
+      "saas"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 25000000,
     "sweet_spot": 5000000,
@@ -282,8 +475,18 @@
     "twitter_url": "https://twitter.com/ElevationCap",
     "is_active": true,
     "data_quality_score": 93,
-    "notable_investments": ["Paytm", "Swiggy", "Meesho", "ShareChat", "Urban Company"],
-    "partners": ["Ravi Adusumalli", "Mukul Arora", "Mridul Arora"]
+    "notable_investments": [
+      "Paytm",
+      "Swiggy",
+      "Meesho",
+      "ShareChat",
+      "Urban Company"
+    ],
+    "partners": [
+      "Ravi Adusumalli",
+      "Mukul Arora",
+      "Mridul Arora"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440012",
@@ -293,9 +496,18 @@
     "website": "https://lsindia.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["saas", "enterprise", "consumer"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "enterprise",
+      "consumer"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 25000000,
     "sweet_spot": 5000000,
@@ -308,8 +520,18 @@
     "twitter_url": "https://twitter.com/LightspeedIndia",
     "is_active": true,
     "data_quality_score": 90,
-    "notable_investments": ["OYO", "Udaan", "Yellow Messenger", "Sarva", "Darwinbox"],
-    "partners": ["Dev Khare", "Harsha Kumar", "Hemant Mohapatra"]
+    "notable_investments": [
+      "OYO",
+      "Udaan",
+      "Yellow Messenger",
+      "Sarva",
+      "Darwinbox"
+    ],
+    "partners": [
+      "Dev Khare",
+      "Harsha Kumar",
+      "Hemant Mohapatra"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440013",
@@ -319,9 +541,19 @@
     "website": "https://3one4capital.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed", "seed", "series_a"],
-    "sectors": ["saas", "deeptech", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "deeptech",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 500000,
     "check_size_max": 10000000,
     "sweet_spot": 2000000,
@@ -334,8 +566,18 @@
     "twitter_url": "https://twitter.com/3one4Capital",
     "is_active": true,
     "data_quality_score": 88,
-    "notable_investments": ["Darwinbox", "Licious", "Open Financial", "Koo", "NiYO"],
-    "partners": ["Pranav Pai", "Siddarth Pai", "Nruthya Madappa"]
+    "notable_investments": [
+      "Darwinbox",
+      "Licious",
+      "Open Financial",
+      "Koo",
+      "NiYO"
+    ],
+    "partners": [
+      "Pranav Pai",
+      "Siddarth Pai",
+      "Nruthya Madappa"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440014",
@@ -345,9 +587,18 @@
     "website": "https://stellarisvp.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["saas", "consumer", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 10000000,
     "sweet_spot": 3000000,
@@ -360,8 +611,18 @@
     "twitter_url": "https://twitter.com/StellarisVP",
     "is_active": true,
     "data_quality_score": 87,
-    "notable_investments": ["Mamaearth", "Ixigo", "Clovia", "Navi", "Jar"],
-    "partners": ["Alok Goyal", "Rahul Chowdhri", "Ritesh Banglani"]
+    "notable_investments": [
+      "Mamaearth",
+      "Ixigo",
+      "Clovia",
+      "Navi",
+      "Jar"
+    ],
+    "partners": [
+      "Alok Goyal",
+      "Rahul Chowdhri",
+      "Ritesh Banglani"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440015",
@@ -371,9 +632,18 @@
     "website": "https://primevp.in",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["saas", "healthtech", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "healthtech",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 500000,
     "check_size_max": 5000000,
     "sweet_spot": 1500000,
@@ -386,8 +656,18 @@
     "twitter_url": "https://twitter.com/PrimeVP",
     "is_active": true,
     "data_quality_score": 86,
-    "notable_investments": ["MyGate", "NiYO Solutions", "Dozee", "Quizizz", "Ezetap"],
-    "partners": ["Sanjay Swamy", "Shripati Acharya", "Amit Somani"]
+    "notable_investments": [
+      "MyGate",
+      "NiYO Solutions",
+      "Dozee",
+      "Quizizz",
+      "Ezetap"
+    ],
+    "partners": [
+      "Sanjay Swamy",
+      "Shripati Acharya",
+      "Amit Somani"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440016",
@@ -397,9 +677,18 @@
     "website": "https://waterbridge.in",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["saas", "fintech", "consumer"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "saas",
+      "fintech",
+      "consumer"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 200000,
     "check_size_max": 3000000,
     "sweet_spot": 1000000,
@@ -412,8 +701,16 @@
     "twitter_url": "https://twitter.com/WaterBridgeVC",
     "is_active": true,
     "data_quality_score": 83,
-    "notable_investments": ["KhataBook", "Leap Finance", "Apna", "Klub"],
-    "partners": ["Manish Kheterpal", "Gaurav Gupta"]
+    "notable_investments": [
+      "KhataBook",
+      "Leap Finance",
+      "Apna",
+      "Klub"
+    ],
+    "partners": [
+      "Manish Kheterpal",
+      "Gaurav Gupta"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440017",
@@ -423,9 +720,18 @@
     "website": "https://venturehighway.io",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["saas", "consumer", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 200000,
     "check_size_max": 2000000,
     "sweet_spot": 500000,
@@ -438,8 +744,16 @@
     "twitter_url": "https://twitter.com/VentureHighway",
     "is_active": true,
     "data_quality_score": 82,
-    "notable_investments": ["Meesho", "Spinny", "Cred", "Khatabook"],
-    "partners": ["Samir Sood", "Neeraj Arora"]
+    "notable_investments": [
+      "Meesho",
+      "Spinny",
+      "Cred",
+      "Khatabook"
+    ],
+    "partners": [
+      "Samir Sood",
+      "Neeraj Arora"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440018",
@@ -449,9 +763,16 @@
     "website": "https://antler.co/location/india",
     "logo_url": null,
     "type": "accelerator",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India", "Global"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india",
+      "global"
+    ],
     "check_size_min": 100000,
     "check_size_max": 500000,
     "sweet_spot": 250000,
@@ -464,8 +785,15 @@
     "twitter_url": "https://twitter.com/AntlerGlobal",
     "is_active": true,
     "data_quality_score": 84,
-    "notable_investments": ["Flam", "Jar", "Shobitam"],
-    "partners": ["Nitin Sharma", "Rajiv Srivatsa"]
+    "notable_investments": [
+      "Flam",
+      "Jar",
+      "Shobitam"
+    ],
+    "partners": [
+      "Nitin Sharma",
+      "Rajiv Srivatsa"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440019",
@@ -475,9 +803,17 @@
     "website": "https://better.capital",
     "logo_url": null,
     "type": "vc",
-    "stages": ["pre_seed"],
-    "sectors": ["saas", "consumer", "fintech"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 50000,
     "check_size_max": 500000,
     "sweet_spot": 150000,
@@ -490,8 +826,15 @@
     "twitter_url": "https://twitter.com/bikinicapital",
     "is_active": true,
     "data_quality_score": 81,
-    "notable_investments": ["Teachmint", "Leap", "OneCode", "Fampay"],
-    "partners": ["Vaibhav Domkundwar"]
+    "notable_investments": [
+      "Teachmint",
+      "Leap",
+      "OneCode",
+      "Fampay"
+    ],
+    "partners": [
+      "Vaibhav Domkundwar"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440020",
@@ -501,9 +844,18 @@
     "website": "https://arkam.vc",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["fintech", "healthtech", "logistics"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "healthtech",
+      "logistics"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 10000000,
     "sweet_spot": 3000000,
@@ -516,8 +868,16 @@
     "twitter_url": "https://twitter.com/ArkamVentures",
     "is_active": true,
     "data_quality_score": 83,
-    "notable_investments": ["Fibe", "Jai Kisan", "Yulu", "Bolt"],
-    "partners": ["Rahul Chari", "Bala Srinivasa"]
+    "notable_investments": [
+      "Fibe",
+      "Jai Kisan",
+      "Yulu",
+      "Bolt"
+    ],
+    "partners": [
+      "Rahul Chari",
+      "Bala Srinivasa"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440021",
@@ -527,9 +887,16 @@
     "website": "https://ycombinator.com",
     "logo_url": null,
     "type": "accelerator",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["Global"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 500000,
     "check_size_max": 500000,
     "sweet_spot": 500000,
@@ -542,8 +909,20 @@
     "twitter_url": "https://twitter.com/ycombinator",
     "is_active": true,
     "data_quality_score": 95,
-    "notable_investments": ["Airbnb", "Stripe", "Dropbox", "Razorpay", "Coinbase", "Meesho"],
-    "partners": ["Garry Tan", "Jared Friedman", "Michael Seibel", "Gustaf Alstromer"]
+    "notable_investments": [
+      "Airbnb",
+      "Stripe",
+      "Dropbox",
+      "Razorpay",
+      "Coinbase",
+      "Meesho"
+    ],
+    "partners": [
+      "Garry Tan",
+      "Jared Friedman",
+      "Michael Seibel",
+      "Gustaf Alstromer"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440022",
@@ -553,9 +932,15 @@
     "website": "https://techstars.com",
     "logo_url": null,
     "type": "accelerator",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["Global"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 120000,
     "check_size_max": 120000,
     "sweet_spot": 120000,
@@ -568,8 +953,16 @@
     "twitter_url": "https://twitter.com/techstars",
     "is_active": true,
     "data_quality_score": 90,
-    "notable_investments": ["SendGrid", "ClassPass", "Chainalysis", "Remitly"],
-    "partners": ["David Cohen", "David Brown"]
+    "notable_investments": [
+      "SendGrid",
+      "ClassPass",
+      "Chainalysis",
+      "Remitly"
+    ],
+    "partners": [
+      "David Cohen",
+      "David Brown"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440023",
@@ -579,9 +972,16 @@
     "website": "https://500.co",
     "logo_url": null,
     "type": "accelerator",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["Global"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 150000,
     "check_size_max": 500000,
     "sweet_spot": 250000,
@@ -594,8 +994,17 @@
     "twitter_url": "https://twitter.com/500Global",
     "is_active": true,
     "data_quality_score": 89,
-    "notable_investments": ["Canva", "Grab", "Talkdesk", "Udemy", "GitLab"],
-    "partners": ["Christine Tsai", "Clayton Bryan"]
+    "notable_investments": [
+      "Canva",
+      "Grab",
+      "Talkdesk",
+      "Udemy",
+      "GitLab"
+    ],
+    "partners": [
+      "Christine Tsai",
+      "Clayton Bryan"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440024",
@@ -605,9 +1014,18 @@
     "website": "https://tigerglobal.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["series_a", "series_b_plus"],
-    "sectors": ["consumer", "fintech", "saas"],
-    "geographies": ["Global"],
+    "stages": [
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech",
+      "saas"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 5000000,
     "check_size_max": 100000000,
     "sweet_spot": 25000000,
@@ -620,8 +1038,18 @@
     "twitter_url": null,
     "is_active": true,
     "data_quality_score": 88,
-    "notable_investments": ["Flipkart", "Razorpay", "Freshworks", "Infra.Market", "Slice"],
-    "partners": ["Chase Coleman", "Scott Shleifer", "Lee Fixel"]
+    "notable_investments": [
+      "Flipkart",
+      "Razorpay",
+      "Freshworks",
+      "Infra.Market",
+      "Slice"
+    ],
+    "partners": [
+      "Chase Coleman",
+      "Scott Shleifer",
+      "Lee Fixel"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440025",
@@ -631,9 +1059,17 @@
     "website": "https://insightpartners.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["series_a", "series_b_plus"],
-    "sectors": ["saas", "enterprise"],
-    "geographies": ["Global"],
+    "stages": [
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "saas",
+      "enterprise"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 10000000,
     "check_size_max": 100000000,
     "sweet_spot": 30000000,
@@ -646,8 +1082,18 @@
     "twitter_url": "https://twitter.com/insaborhood",
     "is_active": true,
     "data_quality_score": 91,
-    "notable_investments": ["Freshworks", "BrowserStack", "Postman", "Veeam", "JFrog"],
-    "partners": ["Jeff Horing", "Deven Parekh", "Lonne Jaffe"]
+    "notable_investments": [
+      "Freshworks",
+      "BrowserStack",
+      "Postman",
+      "Veeam",
+      "JFrog"
+    ],
+    "partners": [
+      "Jeff Horing",
+      "Deven Parekh",
+      "Lonne Jaffe"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440026",
@@ -657,9 +1103,18 @@
     "website": "https://generalcatalyst.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["saas", "fintech", "healthtech"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "fintech",
+      "healthtech"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 50000000,
     "sweet_spot": 10000000,
@@ -672,8 +1127,18 @@
     "twitter_url": "https://twitter.com/gcvp",
     "is_active": true,
     "data_quality_score": 90,
-    "notable_investments": ["Stripe", "Snap", "Airbnb", "HubSpot", "Livspace"],
-    "partners": ["Hemant Taneja", "Deep Nishar", "Adam Valkin"]
+    "notable_investments": [
+      "Stripe",
+      "Snap",
+      "Airbnb",
+      "HubSpot",
+      "Livspace"
+    ],
+    "partners": [
+      "Hemant Taneja",
+      "Deep Nishar",
+      "Adam Valkin"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440027",
@@ -683,9 +1148,18 @@
     "website": "https://foundersfund.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["deeptech", "consumer", "saas"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "deeptech",
+      "consumer",
+      "saas"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 50000000,
     "sweet_spot": 10000000,
@@ -698,8 +1172,18 @@
     "twitter_url": "https://twitter.com/foaborhood",
     "is_active": true,
     "data_quality_score": 88,
-    "notable_investments": ["SpaceX", "Palantir", "Anduril", "Stripe", "Nubank"],
-    "partners": ["Peter Thiel", "Keith Rabois", "Brian Singerman"]
+    "notable_investments": [
+      "SpaceX",
+      "Palantir",
+      "Anduril",
+      "Stripe",
+      "Nubank"
+    ],
+    "partners": [
+      "Peter Thiel",
+      "Keith Rabois",
+      "Brian Singerman"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440028",
@@ -709,9 +1193,19 @@
     "website": "https://a16z.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a", "series_b_plus"],
-    "sectors": ["saas", "fintech", "ai_ml"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "saas",
+      "fintech",
+      "ai_ml"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 100000000,
     "sweet_spot": 25000000,
@@ -724,8 +1218,19 @@
     "twitter_url": "https://twitter.com/a16z",
     "is_active": true,
     "data_quality_score": 95,
-    "notable_investments": ["GitHub", "Coinbase", "Databricks", "Roblox", "Instacart"],
-    "partners": ["Marc Andreessen", "Ben Horowitz", "Andrew Chen", "Martin Casado"]
+    "notable_investments": [
+      "GitHub",
+      "Coinbase",
+      "Databricks",
+      "Roblox",
+      "Instacart"
+    ],
+    "partners": [
+      "Marc Andreessen",
+      "Ben Horowitz",
+      "Andrew Chen",
+      "Martin Casado"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440029",
@@ -735,9 +1240,19 @@
     "website": "https://lsvp.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a", "series_b_plus"],
-    "sectors": ["enterprise", "consumer", "fintech"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "enterprise",
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 100000000,
     "sweet_spot": 20000000,
@@ -750,8 +1265,18 @@
     "twitter_url": "https://twitter.com/lightaborhood",
     "is_active": true,
     "data_quality_score": 92,
-    "notable_investments": ["Snap", "Affirm", "Rubrik", "OYO", "Grafana Labs"],
-    "partners": ["Barry Eggers", "Ravi Mhatre", "Gaurav Gupta"]
+    "notable_investments": [
+      "Snap",
+      "Affirm",
+      "Rubrik",
+      "OYO",
+      "Grafana Labs"
+    ],
+    "partners": [
+      "Barry Eggers",
+      "Ravi Mhatre",
+      "Gaurav Gupta"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440030",
@@ -761,9 +1286,19 @@
     "website": "https://bvp.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a", "series_b_plus"],
-    "sectors": ["saas", "consumer", "healthcare"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "healthcare"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 50000000,
     "sweet_spot": 15000000,
@@ -776,8 +1311,18 @@
     "twitter_url": "https://twitter.com/BessemerVP",
     "is_active": true,
     "data_quality_score": 93,
-    "notable_investments": ["Shopify", "Twilio", "LinkedIn", "Swiggy", "PagerDuty"],
-    "partners": ["Byron Deeter", "Vishal Gupta", "Bob Goodman"]
+    "notable_investments": [
+      "Shopify",
+      "Twilio",
+      "LinkedIn",
+      "Swiggy",
+      "PagerDuty"
+    ],
+    "partners": [
+      "Byron Deeter",
+      "Vishal Gupta",
+      "Bob Goodman"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440031",
@@ -787,9 +1332,18 @@
     "website": "https://bcapgroup.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["series_a", "series_b_plus"],
-    "sectors": ["fintech", "healthtech", "enterprise"],
-    "geographies": ["Global"],
+    "stages": [
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "fintech",
+      "healthtech",
+      "enterprise"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 5000000,
     "check_size_max": 50000000,
     "sweet_spot": 15000000,
@@ -802,8 +1356,17 @@
     "twitter_url": "https://twitter.com/BCapitalGroup",
     "is_active": true,
     "data_quality_score": 87,
-    "notable_investments": ["Icertis", "Infra.Market", "Daily Harvest", "Atomicwork"],
-    "partners": ["Eduardo Saverin", "Raj Ganguly", "Howard Morgan"]
+    "notable_investments": [
+      "Icertis",
+      "Infra.Market",
+      "Daily Harvest",
+      "Atomicwork"
+    ],
+    "partners": [
+      "Eduardo Saverin",
+      "Raj Ganguly",
+      "Howard Morgan"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440032",
@@ -813,9 +1376,16 @@
     "website": "https://ribbitcap.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["fintech"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 25000000,
     "sweet_spot": 5000000,
@@ -828,8 +1398,17 @@
     "twitter_url": "https://twitter.com/ribaborhood",
     "is_active": true,
     "data_quality_score": 85,
-    "notable_investments": ["Robinhood", "Coinbase", "Razorpay", "Nubank", "Brex"],
-    "partners": ["Micky Malka", "Nick Shalek"]
+    "notable_investments": [
+      "Robinhood",
+      "Coinbase",
+      "Razorpay",
+      "Nubank",
+      "Brex"
+    ],
+    "partners": [
+      "Micky Malka",
+      "Nick Shalek"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440033",
@@ -839,9 +1418,16 @@
     "website": "https://qedinvestors.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["fintech"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 25000000,
     "sweet_spot": 5000000,
@@ -854,8 +1440,18 @@
     "twitter_url": "https://twitter.com/QEDInvestors",
     "is_active": true,
     "data_quality_score": 86,
-    "notable_investments": ["Credit Karma", "Nubank", "Current", "Kavak", "Creditas"],
-    "partners": ["Nigel Morris", "Frank Rotman", "Amias Gerety"]
+    "notable_investments": [
+      "Credit Karma",
+      "Nubank",
+      "Current",
+      "Kavak",
+      "Creditas"
+    ],
+    "partners": [
+      "Nigel Morris",
+      "Frank Rotman",
+      "Amias Gerety"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440034",
@@ -865,9 +1461,16 @@
     "website": "https://goodwatercap.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["consumer"],
-    "geographies": ["Global"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "consumer"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 15000000,
     "sweet_spot": 5000000,
@@ -880,8 +1483,17 @@
     "twitter_url": "https://twitter.com/GoodwaterCap",
     "is_active": true,
     "data_quality_score": 83,
-    "notable_investments": ["StockX", "Faire", "Cred", "Brex", "Plaid"],
-    "partners": ["Eric Kim", "Chi-Hua Chien"]
+    "notable_investments": [
+      "StockX",
+      "Faire",
+      "Cred",
+      "Brex",
+      "Plaid"
+    ],
+    "partners": [
+      "Eric Kim",
+      "Chi-Hua Chien"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440035",
@@ -891,9 +1503,19 @@
     "website": "https://surgeahead.com",
     "logo_url": null,
     "type": "accelerator",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["saas", "consumer", "fintech"],
-    "geographies": ["Southeast Asia", "India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "southeast_asia",
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 3000000,
     "sweet_spot": 2000000,
@@ -906,8 +1528,16 @@
     "twitter_url": "https://twitter.com/surgeahead",
     "is_active": true,
     "data_quality_score": 87,
-    "notable_investments": ["Khatabook", "Doubtnut", "BukuWarung", "Classplus"],
-    "partners": ["Rajan Anandan", "Shailendra Singh"]
+    "notable_investments": [
+      "Khatabook",
+      "Doubtnut",
+      "BukuWarung",
+      "Classplus"
+    ],
+    "partners": [
+      "Rajan Anandan",
+      "Shailendra Singh"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440036",
@@ -917,9 +1547,16 @@
     "website": "https://indianangelnetwork.com",
     "logo_url": null,
     "type": "angel",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 100000,
     "check_size_max": 1000000,
     "sweet_spot": 300000,
@@ -932,8 +1569,16 @@
     "twitter_url": "https://twitter.com/IANInvestors",
     "is_active": true,
     "data_quality_score": 82,
-    "notable_investments": ["Box8", "Wow Momo", "Druva", "EarlySalary"],
-    "partners": ["Padmaja Ruparel", "Saurabh Srivastava"]
+    "notable_investments": [
+      "Box8",
+      "Wow Momo",
+      "Druva",
+      "EarlySalary"
+    ],
+    "partners": [
+      "Padmaja Ruparel",
+      "Saurabh Srivastava"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440037",
@@ -943,9 +1588,16 @@
     "website": "https://letsventure.com",
     "logo_url": null,
     "type": "angel",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 50000,
     "check_size_max": 500000,
     "sweet_spot": 150000,
@@ -958,8 +1610,15 @@
     "twitter_url": "https://twitter.com/LetsVenture",
     "is_active": true,
     "data_quality_score": 80,
-    "notable_investments": ["Fynd", "Wishberry", "TravelTriangle"],
-    "partners": ["Shanti Mohan", "Sanjay Jha"]
+    "notable_investments": [
+      "Fynd",
+      "Wishberry",
+      "TravelTriangle"
+    ],
+    "partners": [
+      "Shanti Mohan",
+      "Sanjay Jha"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440038",
@@ -969,9 +1628,16 @@
     "website": "https://angellist.com",
     "logo_url": null,
     "type": "angel",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 25000,
     "check_size_max": 500000,
     "sweet_spot": 100000,
@@ -984,8 +1650,12 @@
     "twitter_url": "https://twitter.com/angellist",
     "is_active": true,
     "data_quality_score": 79,
-    "notable_investments": ["Various via syndicates"],
-    "partners": ["Utsav Somani"]
+    "notable_investments": [
+      "Various via syndicates"
+    ],
+    "partners": [
+      "Utsav Somani"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440039",
@@ -995,9 +1665,16 @@
     "website": "https://mumbaiangels.com",
     "logo_url": null,
     "type": "angel",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 100000,
     "check_size_max": 500000,
     "sweet_spot": 250000,
@@ -1010,8 +1687,15 @@
     "twitter_url": "https://twitter.com/MumbaiAngels",
     "is_active": true,
     "data_quality_score": 78,
-    "notable_investments": ["Inkfruit", "Sapience Analytics", "Zippr"],
-    "partners": ["Nandini Mansinghka", "Prashant Mehta"]
+    "notable_investments": [
+      "Inkfruit",
+      "Sapience Analytics",
+      "Zippr"
+    ],
+    "partners": [
+      "Nandini Mansinghka",
+      "Prashant Mehta"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440040",
@@ -1021,9 +1705,16 @@
     "website": "https://calcuttaangels.com",
     "logo_url": null,
     "type": "angel",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 50000,
     "check_size_max": 300000,
     "sweet_spot": 100000,
@@ -1036,7 +1727,10 @@
     "twitter_url": null,
     "is_active": true,
     "data_quality_score": 72,
-    "notable_investments": ["Wow Momo", "FreshMenu"],
+    "notable_investments": [
+      "Wow Momo",
+      "FreshMenu"
+    ],
     "partners": []
   },
   {
@@ -1047,9 +1741,15 @@
     "website": "https://t-hub.co",
     "logo_url": null,
     "type": "incubator",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": null,
     "check_size_max": null,
     "sweet_spot": null,
@@ -1073,9 +1773,15 @@
     "website": "https://nasscom.in/10000-startups",
     "logo_url": null,
     "type": "incubator",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": null,
     "check_size_max": null,
     "sweet_spot": null,
@@ -1099,9 +1805,15 @@
     "website": "https://startupindia.gov.in",
     "logo_url": null,
     "type": "grant",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": null,
     "check_size_max": null,
     "sweet_spot": null,
@@ -1125,9 +1837,15 @@
     "website": "https://aim.gov.in",
     "logo_url": null,
     "type": "grant",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": null,
     "check_size_max": 150000,
     "sweet_spot": 75000,
@@ -1151,9 +1869,16 @@
     "website": "https://ciie.co",
     "logo_url": null,
     "type": "incubator",
-    "stages": ["pre_seed", "seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 50000,
     "check_size_max": 500000,
     "sweet_spot": 150000,
@@ -1166,8 +1891,14 @@
     "twitter_url": "https://twitter.com/ciaborhood",
     "is_active": true,
     "data_quality_score": 77,
-    "notable_investments": ["Razorpay", "Tracxn", "Detect Technologies"],
-    "partners": ["Kunal Upadhyay"]
+    "notable_investments": [
+      "Razorpay",
+      "Tracxn",
+      "Detect Technologies"
+    ],
+    "partners": [
+      "Kunal Upadhyay"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440046",
@@ -1177,9 +1908,18 @@
     "website": "https://omidyarnetwork.in",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["fintech", "edtech", "consumer"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "edtech",
+      "consumer"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 15000000,
     "sweet_spot": 5000000,
@@ -1192,8 +1932,16 @@
     "twitter_url": "https://twitter.com/OmijaborhoodIN",
     "is_active": true,
     "data_quality_score": 84,
-    "notable_investments": ["Dailyhunt", "Vedantu", "PhonePe", "Pratilipi"],
-    "partners": ["Roopa Kudva", "Badri Pillapakkam"]
+    "notable_investments": [
+      "Dailyhunt",
+      "Vedantu",
+      "PhonePe",
+      "Pratilipi"
+    ],
+    "partners": [
+      "Roopa Kudva",
+      "Badri Pillapakkam"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440047",
@@ -1203,9 +1951,15 @@
     "website": "https://peakxv.com/programs/scout",
     "logo_url": null,
     "type": "angel",
-    "stages": ["pre_seed"],
-    "sectors": ["all_sectors"],
-    "geographies": ["India"],
+    "stages": [
+      "pre_seed"
+    ],
+    "sectors": [
+      "all_sectors"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 100000,
     "check_size_max": 500000,
     "sweet_spot": 200000,
@@ -1218,7 +1972,9 @@
     "twitter_url": "https://twitter.com/PeakXVPartners",
     "is_active": true,
     "data_quality_score": 75,
-    "notable_investments": ["Various early-stage startups"],
+    "notable_investments": [
+      "Various early-stage startups"
+    ],
     "partners": []
   },
   {
@@ -1229,9 +1985,17 @@
     "website": "https://firesideventures.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["seed", "series_a"],
-    "sectors": ["consumer", "ecommerce"],
-    "geographies": ["India"],
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "consumer",
+      "ecommerce"
+    ],
+    "geographies": [
+      "india"
+    ],
     "check_size_min": 1000000,
     "check_size_max": 10000000,
     "sweet_spot": 3000000,
@@ -1244,8 +2008,18 @@
     "twitter_url": "https://twitter.com/FiresideVenture",
     "is_active": true,
     "data_quality_score": 85,
-    "notable_investments": ["Mamaearth", "BoAt", "Yoga Bar", "Sleepy Owl", "Country Delight"],
-    "partners": ["Kanwaljit Singh", "Vinay Singh", "Dipanjan Basu"]
+    "notable_investments": [
+      "Mamaearth",
+      "BoAt",
+      "Yoga Bar",
+      "Sleepy Owl",
+      "Country Delight"
+    ],
+    "partners": [
+      "Kanwaljit Singh",
+      "Vinay Singh",
+      "Dipanjan Basu"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440049",
@@ -1255,9 +2029,16 @@
     "website": "https://dst.global",
     "logo_url": null,
     "type": "vc",
-    "stages": ["series_b_plus"],
-    "sectors": ["consumer", "fintech"],
-    "geographies": ["Global"],
+    "stages": [
+      "series_b_plus"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 50000000,
     "check_size_max": 500000000,
     "sweet_spot": 100000000,
@@ -1270,8 +2051,18 @@
     "twitter_url": null,
     "is_active": true,
     "data_quality_score": 82,
-    "notable_investments": ["Facebook", "Spotify", "Airbnb", "Swiggy", "Ola"],
-    "partners": ["Yuri Milner", "John Lindfors", "Rahul Mehta"]
+    "notable_investments": [
+      "Facebook",
+      "Spotify",
+      "Airbnb",
+      "Swiggy",
+      "Ola"
+    ],
+    "partners": [
+      "Yuri Milner",
+      "John Lindfors",
+      "Rahul Mehta"
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440050",
@@ -1281,9 +2072,17 @@
     "website": "https://visionfund.com",
     "logo_url": null,
     "type": "vc",
-    "stages": ["series_b_plus"],
-    "sectors": ["consumer", "fintech", "logistics"],
-    "geographies": ["Global"],
+    "stages": [
+      "series_b_plus"
+    ],
+    "sectors": [
+      "consumer",
+      "fintech",
+      "logistics"
+    ],
+    "geographies": [
+      "global"
+    ],
     "check_size_min": 100000000,
     "check_size_max": 500000000,
     "sweet_spot": 200000000,
@@ -1296,7 +2095,1133 @@
     "twitter_url": "https://twitter.com/SoftBank",
     "is_active": true,
     "data_quality_score": 90,
-    "notable_investments": ["Flipkart", "Ola", "Paytm", "Delhivery", "Lenskart", "FirstCry"],
-    "partners": ["Masayoshi Son", "Rajeev Misra", "Munish Varma"]
+    "notable_investments": [
+      "Flipkart",
+      "Ola",
+      "Paytm",
+      "Delhivery",
+      "Lenskart",
+      "FirstCry"
+    ],
+    "partners": [
+      "Masayoshi Son",
+      "Rajeev Misra",
+      "Munish Varma"
+    ]
+  },
+  {
+    "name": "Sequoia Capital",
+    "slug": "sequoia-capital",
+    "description": "Sequoia Capital is one of the most storied venture capital firms in Silicon Valley, having backed Apple, Google, and WhatsApp. Managing over $85 billion, Sequoia invests from seed through growth in technology companies across SaaS, consumer, and enterprise.",
+    "website": "https://sequoiacap.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "enterprise"
+    ],
+    "geographies": [
+      "us"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 100000000,
+    "sweet_spot": 15000000,
+    "total_fund_size": 85000000000,
+    "portfolio_count": 1500,
+    "founded_year": 1972,
+    "headquarters": "Menlo Park, US",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/sequoia-capital",
+    "twitter_url": "https://twitter.com/sequoia",
+    "notable_investments": [
+      "Apple",
+      "Google",
+      "WhatsApp",
+      "Stripe",
+      "YouTube"
+    ],
+    "partners": [
+      "Roelof Botha",
+      "Alfred Lin",
+      "Pat Grady"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440051",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Kleiner Perkins",
+    "slug": "kleiner-perkins",
+    "description": "Kleiner Perkins is a legendary Silicon Valley venture firm that backed Amazon, Google, and Twitter. Now focused on early-stage investments, KP invests in seed through Series B across SaaS, consumer, and healthtech.",
+    "website": "https://kleinerperkins.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "healthtech"
+    ],
+    "geographies": [
+      "us"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 25000000,
+    "sweet_spot": 8000000,
+    "total_fund_size": 9000000000,
+    "portfolio_count": 1000,
+    "founded_year": 1972,
+    "headquarters": "Menlo Park, US",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/kleiner-perkins",
+    "twitter_url": "https://twitter.com/kleaborhood",
+    "notable_investments": [
+      "Amazon",
+      "Google",
+      "Twitter",
+      "Slack",
+      "Figma"
+    ],
+    "partners": [
+      "Mamoon Hamid",
+      "Ilya Fushman",
+      "Bucky Moore"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440052",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Greylock Partners",
+    "slug": "greylock-partners",
+    "description": "Greylock Partners is a leading Silicon Valley venture capital firm known for investments in LinkedIn, Facebook, and Discord. Greylock invests primarily at seed and Series A stages in enterprise, consumer, and AI/ML companies.",
+    "website": "https://greylock.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "enterprise",
+      "consumer",
+      "ai_ml"
+    ],
+    "geographies": [
+      "us"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 25000000,
+    "sweet_spot": 10000000,
+    "total_fund_size": 5000000000,
+    "portfolio_count": 300,
+    "founded_year": 1965,
+    "headquarters": "Menlo Park, US",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/greylock-partners",
+    "twitter_url": "https://twitter.com/greylockvc",
+    "notable_investments": [
+      "LinkedIn",
+      "Facebook",
+      "Discord",
+      "Figma",
+      "Roblox"
+    ],
+    "partners": [
+      "Reid Hoffman",
+      "David Sze",
+      "Sarah Guo"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440053",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Benchmark",
+    "slug": "benchmark-capital",
+    "description": "Benchmark is an elite Silicon Valley venture firm famous for its equal partnership model and early bets on eBay, Twitter, Uber, and Snap. Benchmark invests exclusively at Series A with check sizes of $10-20M.",
+    "website": "https://benchmark.com",
+    "type": "vc",
+    "stages": [
+      "series_a"
+    ],
+    "sectors": [
+      "consumer",
+      "enterprise",
+      "saas"
+    ],
+    "geographies": [
+      "us"
+    ],
+    "check_size_min": 10000000,
+    "check_size_max": 20000000,
+    "sweet_spot": 15000000,
+    "total_fund_size": 3500000000,
+    "portfolio_count": 200,
+    "founded_year": 1995,
+    "headquarters": "San Francisco, US",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/benchmark",
+    "twitter_url": null,
+    "notable_investments": [
+      "eBay",
+      "Twitter",
+      "Uber",
+      "Snap",
+      "Discord"
+    ],
+    "partners": [
+      "Bill Gurley",
+      "Peter Fenton",
+      "Sarah Tavel"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440054",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "First Round Capital",
+    "slug": "first-round-capital",
+    "description": "First Round Capital is a premier US seed-stage venture firm that backs technology companies at the earliest stages. Known for investments in Uber, Square, and Notion, First Round offers a strong founder community and operational support.",
+    "website": "https://firstround.com",
+    "type": "vc",
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "saas",
+      "consumer",
+      "enterprise"
+    ],
+    "geographies": [
+      "us"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 5000000,
+    "sweet_spot": 2000000,
+    "total_fund_size": 2000000000,
+    "portfolio_count": 500,
+    "founded_year": 2004,
+    "headquarters": "San Francisco, US",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/first-round-capital",
+    "twitter_url": "https://twitter.com/firstround",
+    "notable_investments": [
+      "Uber",
+      "Square",
+      "Notion",
+      "Roblox",
+      "Flatiron Health"
+    ],
+    "partners": [
+      "Josh Kopelman",
+      "Hayley Barna",
+      "Todd Jackson"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440055",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Union Square Ventures",
+    "slug": "union-square-ventures",
+    "description": "Union Square Ventures is a New York-based venture firm that has backed Twitter, Tumblr, Etsy, and Coinbase. USV focuses on seed and Series A investments in companies that broaden access to knowledge, capital, and wellbeing.",
+    "website": "https://usv.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "consumer",
+      "saas"
+    ],
+    "geographies": [
+      "us"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 15000000,
+    "sweet_spot": 5000000,
+    "total_fund_size": 2000000000,
+    "portfolio_count": 200,
+    "founded_year": 2003,
+    "headquarters": "New York, US",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/union-square-ventures",
+    "twitter_url": "https://twitter.com/usaborhood",
+    "notable_investments": [
+      "Twitter",
+      "Etsy",
+      "Coinbase",
+      "Tumblr",
+      "Duolingo"
+    ],
+    "partners": [
+      "Fred Wilson",
+      "Albert Wenger",
+      "Rebecca Kaden"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440056",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Atomico",
+    "slug": "atomico",
+    "description": "Atomico is a leading European venture capital firm founded by Skype co-founder Niklas Zennstrom. Based in London, Atomico invests in seed through growth stage technology companies across Europe in SaaS, fintech, and deeptech.",
+    "website": "https://atomico.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "saas",
+      "fintech",
+      "deeptech"
+    ],
+    "geographies": [
+      "europe"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 75000000,
+    "sweet_spot": 15000000,
+    "total_fund_size": 5000000000,
+    "portfolio_count": 150,
+    "founded_year": 2006,
+    "headquarters": "London, UK",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/atomico",
+    "twitter_url": "https://twitter.com/atomaborhood",
+    "notable_investments": [
+      "Klarna",
+      "Supercell",
+      "Graphcore",
+      "MessageBird",
+      "Compass"
+    ],
+    "partners": [
+      "Niklas Zennstrom",
+      "Hiro Tamura",
+      "Sophia Bendz"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440057",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Index Ventures",
+    "slug": "index-ventures",
+    "description": "Index Ventures is a global venture capital firm with deep European roots, based in London and San Francisco. Known for backing Adyen, Deliveroo, Revolut, and Figma, Index invests from seed through growth in fintech, SaaS, and consumer companies.",
+    "website": "https://indexventures.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "fintech",
+      "saas",
+      "consumer"
+    ],
+    "geographies": [
+      "europe",
+      "us"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 100000000,
+    "sweet_spot": 20000000,
+    "total_fund_size": 10000000000,
+    "portfolio_count": 400,
+    "founded_year": 1996,
+    "headquarters": "London, UK",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/index-ventures",
+    "twitter_url": "https://twitter.com/indexventures",
+    "notable_investments": [
+      "Adyen",
+      "Revolut",
+      "Deliveroo",
+      "Figma",
+      "Discord"
+    ],
+    "partners": [
+      "Neil Rimer",
+      "Danny Rimer",
+      "Martin Mignot"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440058",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Accel Europe",
+    "slug": "accel-europe",
+    "description": "Accel Europe is the European arm of global VC firm Accel, based in London. Accel has been one of the most successful investors in European tech, backing Spotify, UiPath, CrowdStrike, and Deliveroo at early stages.",
+    "website": "https://accel.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "fintech",
+      "enterprise"
+    ],
+    "geographies": [
+      "europe"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 50000000,
+    "sweet_spot": 10000000,
+    "total_fund_size": 4000000000,
+    "portfolio_count": 200,
+    "founded_year": 1999,
+    "headquarters": "London, UK",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/accel-partners",
+    "twitter_url": "https://twitter.com/Accel",
+    "notable_investments": [
+      "Spotify",
+      "UiPath",
+      "CrowdStrike",
+      "Deliveroo",
+      "Monzo"
+    ],
+    "partners": [
+      "Luciana Lixandru",
+      "Harry Sherr",
+      "Philippe Botteri"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440059",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Balderton Capital",
+    "slug": "balderton-capital",
+    "description": "Balderton Capital is one of Europe's largest early-stage venture firms, based in London. Investing exclusively in European-founded companies from seed to Series B, Balderton has backed Revolut, Citymapper, and GoCardless.",
+    "website": "https://balderton.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "saas",
+      "consumer"
+    ],
+    "geographies": [
+      "europe"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 30000000,
+    "sweet_spot": 8000000,
+    "total_fund_size": 3000000000,
+    "portfolio_count": 200,
+    "founded_year": 2000,
+    "headquarters": "London, UK",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/balderton-capital",
+    "twitter_url": "https://twitter.com/balderton",
+    "notable_investments": [
+      "Revolut",
+      "GoCardless",
+      "Citymapper",
+      "Nutmeg",
+      "Contentful"
+    ],
+    "partners": [
+      "Bernard Liautaud",
+      "James Wise",
+      "Suranga Chandratillake"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440060",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Northzone",
+    "slug": "northzone",
+    "description": "Northzone is one of Europe's most established venture capital firms, with offices in London, Stockholm, and New York. Known for being an early investor in Spotify, iZettle, and Trustpilot, Northzone invests from seed to Series B in consumer and SaaS companies across Europe.",
+    "website": "https://northzone.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "consumer",
+      "saas",
+      "fintech"
+    ],
+    "geographies": [
+      "europe"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 25000000,
+    "sweet_spot": 8000000,
+    "total_fund_size": 2500000000,
+    "portfolio_count": 200,
+    "founded_year": 1996,
+    "headquarters": "London, UK",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/northzone",
+    "twitter_url": "https://twitter.com/northzone",
+    "notable_investments": [
+      "Spotify",
+      "iZettle",
+      "Trustpilot",
+      "Kahoot",
+      "Colonist"
+    ],
+    "partners": [
+      "Jeppe Zink",
+      "P\u00e4r-J\u00f6rgen P\u00e4rson",
+      "Wendy Xiao"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440061",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Seedcamp",
+    "slug": "seedcamp",
+    "description": "Seedcamp is Europe's leading pre-seed and seed venture fund, based in London. Having backed over 400 companies including TransferWise (Wise), UiPath, and Revolut, Seedcamp invests across all sectors at the earliest stages with check sizes of $100K-$500K.",
+    "website": "https://seedcamp.com",
+    "type": "vc",
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "fintech",
+      "saas",
+      "consumer"
+    ],
+    "geographies": [
+      "europe"
+    ],
+    "check_size_min": 100000,
+    "check_size_max": 500000,
+    "sweet_spot": 250000,
+    "total_fund_size": 500000000,
+    "portfolio_count": 400,
+    "founded_year": 2007,
+    "headquarters": "London, UK",
+    "contact_email": "hello@seedcamp.com",
+    "linkedin_url": "https://linkedin.com/company/seedcamp",
+    "twitter_url": "https://twitter.com/seedcamp",
+    "notable_investments": [
+      "Wise",
+      "UiPath",
+      "Revolut",
+      "Hopin",
+      "Pleo"
+    ],
+    "partners": [
+      "Reshma Sohoni",
+      "Carlos Espinal",
+      "Tom Wilson"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440062",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "STV",
+    "slug": "stv-vc",
+    "description": "STV is the largest technology venture capital fund in the Middle East and North Africa, managing over $750 million. Based in Riyadh, STV invests in seed through growth stage companies across fintech, ecommerce, and enterprise technology in the MENA region.",
+    "website": "https://stv.vc",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "fintech",
+      "ecommerce",
+      "enterprise"
+    ],
+    "geographies": [
+      "middle_east"
+    ],
+    "check_size_min": 1000000,
+    "check_size_max": 50000000,
+    "sweet_spot": 10000000,
+    "total_fund_size": 750000000,
+    "portfolio_count": 50,
+    "founded_year": 2017,
+    "headquarters": "Riyadh, Saudi Arabia",
+    "contact_email": "info@stv.vc",
+    "linkedin_url": "https://linkedin.com/company/stv-vc",
+    "twitter_url": "https://twitter.com/staborhood",
+    "notable_investments": [
+      "Careem",
+      "Tamara",
+      "Unifonic",
+      "Tabby",
+      "Trukker"
+    ],
+    "partners": [
+      "Abdulrahman Tarabzouni",
+      "Waleed Alballaa"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440063",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "BECO Capital",
+    "slug": "beco-capital",
+    "description": "BECO Capital is a Dubai-based early-stage venture capital firm investing in technology startups across the Middle East and North Africa. Focused on seed and Series A, BECO backs fintech, ecommerce, and SaaS companies building for the MENA market.",
+    "website": "https://becocapital.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "ecommerce",
+      "saas"
+    ],
+    "geographies": [
+      "middle_east"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 10000000,
+    "sweet_spot": 3000000,
+    "total_fund_size": 200000000,
+    "portfolio_count": 30,
+    "founded_year": 2012,
+    "headquarters": "Dubai, UAE",
+    "contact_email": "info@becocapital.com",
+    "linkedin_url": "https://linkedin.com/company/beco-capital",
+    "twitter_url": "https://twitter.com/becocapital",
+    "notable_investments": [
+      "Careem",
+      "Swvl",
+      "Bayzat",
+      "Sarwa"
+    ],
+    "partners": [
+      "Dany Farha",
+      "Amir Farha"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440064",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Flat6Labs",
+    "slug": "flat6labs",
+    "description": "Flat6Labs is the MENA region's leading seed and pre-seed stage startup program and fund. Operating accelerator programs across Abu Dhabi, Cairo, Riyadh, Bahrain, and Tunis, Flat6Labs has backed over 400 startups across all sectors in the Middle East and Africa.",
+    "website": "https://flat6labs.com",
+    "type": "accelerator",
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "fintech",
+      "ecommerce",
+      "consumer"
+    ],
+    "geographies": [
+      "middle_east",
+      "africa"
+    ],
+    "check_size_min": 50000,
+    "check_size_max": 500000,
+    "sweet_spot": 150000,
+    "total_fund_size": 200000000,
+    "portfolio_count": 400,
+    "founded_year": 2011,
+    "headquarters": "Cairo, Egypt",
+    "contact_email": "info@flat6labs.com",
+    "linkedin_url": "https://linkedin.com/company/flat6labs",
+    "twitter_url": "https://twitter.com/Flat6Labs",
+    "notable_investments": [
+      "Instabug",
+      "Elmenus",
+      "MoneyFellows",
+      "Yassir"
+    ],
+    "partners": [
+      "Ramez El-Serafy",
+      "Ryaan Sharif"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440065",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Global Founders Capital",
+    "slug": "global-founders-capital",
+    "description": "Global Founders Capital is a venture capital fund investing globally with a strong focus on emerging markets including the Middle East. GFC invests from pre-seed through Series A across ecommerce, fintech, and SaaS with a portfolio of over 300 companies.",
+    "website": "https://globalfounderscapital.com",
+    "type": "vc",
+    "stages": [
+      "pre_seed",
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "ecommerce",
+      "fintech",
+      "saas"
+    ],
+    "geographies": [
+      "middle_east",
+      "europe",
+      "southeast_asia"
+    ],
+    "check_size_min": 250000,
+    "check_size_max": 10000000,
+    "sweet_spot": 2000000,
+    "total_fund_size": 1000000000,
+    "portfolio_count": 300,
+    "founded_year": 2013,
+    "headquarters": "Berlin, Germany",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/global-founders-capital",
+    "twitter_url": null,
+    "notable_investments": [
+      "Loft",
+      "Quinto Andar",
+      "Traveloka",
+      "Delivery Hero"
+    ],
+    "partners": [
+      "Oliver Samwer",
+      "Fabian Siegel"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440066",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Partech Africa",
+    "slug": "partech-africa",
+    "description": "Partech Africa is the Africa-focused fund of global VC firm Partech, and one of the largest VC funds dedicated to African startups. Investing from seed to Series B, Partech Africa backs fintech, logistics, and healthtech companies across the continent.",
+    "website": "https://partechpartners.com/africa",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "logistics",
+      "healthtech"
+    ],
+    "geographies": [
+      "africa"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 15000000,
+    "sweet_spot": 5000000,
+    "total_fund_size": 300000000,
+    "portfolio_count": 40,
+    "founded_year": 2018,
+    "headquarters": "Dakar, Senegal",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/partechpartners",
+    "twitter_url": "https://twitter.com/partaborhood",
+    "notable_investments": [
+      "Wave",
+      "TradeDepot",
+      "Yoco",
+      "Nomba"
+    ],
+    "partners": [
+      "Tidjane Deme",
+      "Cyril Collon"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440067",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "TLcom Capital",
+    "slug": "tlcom-capital",
+    "description": "TLcom Capital is a venture capital firm focused on technology companies in Sub-Saharan Africa. Managing the TIDE Africa Fund, TLcom invests from seed to Series B in fintech, enterprise, and logistics startups across Nigeria, Kenya, and the broader African continent.",
+    "website": "https://tlcomcapital.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "enterprise",
+      "logistics"
+    ],
+    "geographies": [
+      "africa"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 10000000,
+    "sweet_spot": 3000000,
+    "total_fund_size": 150000000,
+    "portfolio_count": 25,
+    "founded_year": 1999,
+    "headquarters": "Nairobi, Kenya",
+    "contact_email": "info@tlcomcapital.com",
+    "linkedin_url": "https://linkedin.com/company/tlcom-capital",
+    "twitter_url": "https://twitter.com/tlaborhood",
+    "notable_investments": [
+      "Andela",
+      "Twiga Foods",
+      "uLesson",
+      "Okra"
+    ],
+    "partners": [
+      "Maurizio Caio",
+      "Omobola Johnson",
+      "Andreata Muforo"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440068",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Novastar Ventures",
+    "slug": "novastar-ventures",
+    "description": "Novastar Ventures is an Africa-focused venture capital firm investing in early-stage companies that serve mass markets across East and West Africa. Focused on fintech, healthtech, and consumer sectors, Novastar backs seed and Series A startups with strong social impact potential.",
+    "website": "https://novastarventures.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "healthtech",
+      "consumer"
+    ],
+    "geographies": [
+      "africa"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 5000000,
+    "sweet_spot": 2000000,
+    "total_fund_size": 200000000,
+    "portfolio_count": 30,
+    "founded_year": 2014,
+    "headquarters": "Nairobi, Kenya",
+    "contact_email": "info@novastarventures.com",
+    "linkedin_url": "https://linkedin.com/company/novastar-ventures",
+    "twitter_url": "https://twitter.com/novastarvc",
+    "notable_investments": [
+      "Apollo Agriculture",
+      "Ilara Health",
+      "Turaco",
+      "Kidato"
+    ],
+    "partners": [
+      "Steve Beck",
+      "Lina Patel"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440069",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Kaszek",
+    "slug": "kaszek-ventures",
+    "description": "Kaszek is the largest venture capital firm in Latin America, founded by MercadoLibre co-founders. Managing over $3 billion, Kaszek invests from seed to growth in fintech, ecommerce, and SaaS companies across Latin America.",
+    "website": "https://kaszek.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a",
+      "series_b_plus"
+    ],
+    "sectors": [
+      "fintech",
+      "ecommerce",
+      "saas"
+    ],
+    "geographies": [
+      "latam"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 50000000,
+    "sweet_spot": 10000000,
+    "total_fund_size": 3000000000,
+    "portfolio_count": 150,
+    "founded_year": 2011,
+    "headquarters": "Buenos Aires, Argentina",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/kaszek-ventures",
+    "twitter_url": "https://twitter.com/kaszek",
+    "notable_investments": [
+      "Nubank",
+      "Kavak",
+      "Creditas",
+      "Konfio",
+      "QuintoAndar"
+    ],
+    "partners": [
+      "Hernan Kazah",
+      "Nicolas Szekasy"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440070",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Monashees",
+    "slug": "monashees",
+    "description": "Monashees is one of Brazil's most prominent venture capital firms, investing in technology companies across Latin America since 2005. Focused on seed through growth stages, Monashees backs fintech, consumer, and SaaS startups with deep regional expertise.",
+    "website": "https://monashees.com.br",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "consumer",
+      "saas"
+    ],
+    "geographies": [
+      "latam"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 20000000,
+    "sweet_spot": 5000000,
+    "total_fund_size": 1500000000,
+    "portfolio_count": 150,
+    "founded_year": 2005,
+    "headquarters": "Sao Paulo, Brazil",
+    "contact_email": null,
+    "linkedin_url": "https://linkedin.com/company/monashees",
+    "twitter_url": "https://twitter.com/monashees",
+    "notable_investments": [
+      "99",
+      "Rappi",
+      "Nuvemshop",
+      "Loggi",
+      "GuiaBolso"
+    ],
+    "partners": [
+      "Eric Acher",
+      "Marcelo Lima"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440071",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "ALLVP",
+    "slug": "allvp",
+    "description": "ALLVP (AL Venture Partners) is a leading early-stage venture capital firm focused on Latin America, based in Mexico City. Investing at seed and Series A stages, ALLVP backs fintech, ecommerce, and SaaS startups across Mexico, Colombia, and Brazil.",
+    "website": "https://allvp.vc",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "fintech",
+      "ecommerce",
+      "saas"
+    ],
+    "geographies": [
+      "latam"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 5000000,
+    "sweet_spot": 2000000,
+    "total_fund_size": 250000000,
+    "portfolio_count": 60,
+    "founded_year": 2012,
+    "headquarters": "Mexico City, Mexico",
+    "contact_email": "hello@allvp.vc",
+    "linkedin_url": "https://linkedin.com/company/allvp",
+    "twitter_url": "https://twitter.com/allvp",
+    "notable_investments": [
+      "Kavak",
+      "Konfio",
+      "Cornershop",
+      "Clip"
+    ],
+    "partners": [
+      "Fernando Lelo de Larrea",
+      "Jose Alberto Velez"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440072",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Jungle Ventures",
+    "slug": "jungle-ventures",
+    "description": "Jungle Ventures is a leading Southeast Asia-focused venture capital firm based in Singapore. Investing from seed through Series B, Jungle Ventures backs SaaS, fintech, and consumer companies across Southeast Asia and India.",
+    "website": "https://jungleventures.com",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "saas",
+      "fintech",
+      "consumer"
+    ],
+    "geographies": [
+      "southeast_asia"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 15000000,
+    "sweet_spot": 5000000,
+    "total_fund_size": 750000000,
+    "portfolio_count": 60,
+    "founded_year": 2012,
+    "headquarters": "Singapore",
+    "contact_email": "hello@jungleventures.com",
+    "linkedin_url": "https://linkedin.com/company/jungle-ventures",
+    "twitter_url": "https://twitter.com/jungleventures",
+    "notable_investments": [
+      "Moglix",
+      "Kredivo",
+      "Livspace",
+      "Validus"
+    ],
+    "partners": [
+      "Amit Anand",
+      "Anurag Srivastava",
+      "David Gowdey"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440073",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "East Ventures",
+    "slug": "east-ventures",
+    "description": "East Ventures is one of Southeast Asia's most active early-stage venture capital firms, based in Jakarta and Singapore. Having invested in over 300 companies including Tokopedia, East Ventures focuses on pre-seed and seed stage startups across ecommerce, fintech, and SaaS.",
+    "website": "https://east.vc",
+    "type": "vc",
+    "stages": [
+      "pre_seed",
+      "seed"
+    ],
+    "sectors": [
+      "ecommerce",
+      "fintech",
+      "saas"
+    ],
+    "geographies": [
+      "southeast_asia"
+    ],
+    "check_size_min": 100000,
+    "check_size_max": 3000000,
+    "sweet_spot": 500000,
+    "total_fund_size": 500000000,
+    "portfolio_count": 300,
+    "founded_year": 2010,
+    "headquarters": "Jakarta, Indonesia",
+    "contact_email": "info@east.vc",
+    "linkedin_url": "https://linkedin.com/company/east-ventures",
+    "twitter_url": "https://twitter.com/EastVentures",
+    "notable_investments": [
+      "Tokopedia",
+      "Ruangguru",
+      "IDN Media",
+      "Waresix",
+      "ShopBack"
+    ],
+    "partners": [
+      "Willson Cuaca",
+      "Batara Eto",
+      "Melisa Irene"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440074",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
+  },
+  {
+    "name": "Wavemaker Partners",
+    "slug": "wavemaker-partners",
+    "description": "Wavemaker Partners is a cross-border venture capital firm with offices in Singapore and Los Angeles, focused on enterprise and deeptech startups in Southeast Asia. Investing at seed and Series A stages, Wavemaker has backed over 200 companies across the region.",
+    "website": "https://wavemaker.vc",
+    "type": "vc",
+    "stages": [
+      "seed",
+      "series_a"
+    ],
+    "sectors": [
+      "enterprise",
+      "deeptech",
+      "saas"
+    ],
+    "geographies": [
+      "southeast_asia"
+    ],
+    "check_size_min": 500000,
+    "check_size_max": 5000000,
+    "sweet_spot": 1500000,
+    "total_fund_size": 300000000,
+    "portfolio_count": 200,
+    "founded_year": 2003,
+    "headquarters": "Singapore",
+    "contact_email": "contact@wavemaker.vc",
+    "linkedin_url": "https://linkedin.com/company/wavemaker-partners",
+    "twitter_url": "https://twitter.com/wavemakervc",
+    "notable_investments": [
+      "Ninja Van",
+      "Carro",
+      "Deskera",
+      "FinAccel"
+    ],
+    "partners": [
+      "Paul Santos",
+      "Eric Manlunas"
+    ],
+    "id": "550e8400-e29b-41d4-a716-446655440075",
+    "logo_url": null,
+    "is_active": true,
+    "data_quality_score": 85
   }
 ]

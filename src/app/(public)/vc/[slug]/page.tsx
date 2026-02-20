@@ -51,19 +51,19 @@ async function getVCPartners(vcId: string) {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const vc = await getVC(params.slug);
   if (!vc) {
-    return { title: "VC Not Found - VCConnect" };
+    return { title: "VC Not Found - CapConnect" };
   }
 
   return {
-    title: `${vc.name} - VCConnect`,
+    title: `${vc.name} - CapConnect`,
     description:
       vc.description?.slice(0, 160) ||
-      `Learn about ${vc.name}, a venture capital firm on VCConnect.`,
+      `Learn about ${vc.name}, a venture capital firm on CapConnect.`,
     openGraph: {
-      title: `${vc.name} - VCConnect`,
+      title: `${vc.name} - CapConnect`,
       description:
         vc.description?.slice(0, 160) ||
-        `Learn about ${vc.name}, a venture capital firm on VCConnect.`,
+        `Learn about ${vc.name}, a venture capital firm on CapConnect.`,
     },
   };
 }
@@ -73,6 +73,12 @@ export default async function VCProfilePage({ params }: PageProps) {
   if (!vc) notFound();
 
   const partners = await getVCPartners(vc.id);
+
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const isLoggedIn = !!user;
 
   const initials = vc.name
     .split(" ")
@@ -355,9 +361,21 @@ export default async function VCProfilePage({ params }: PageProps) {
             </CardContent>
           </Card>
 
-          <Button className="w-full" asChild>
-            <Link href="/signup">Sign up to connect</Link>
-          </Button>
+          {isLoggedIn ? (
+            vc.email ? (
+              <Button className="w-full" asChild>
+                <a href={`mailto:${vc.email}`}>Connect</a>
+              </Button>
+            ) : (
+              <Button className="w-full" disabled>
+                Connect
+              </Button>
+            )
+          ) : (
+            <Button className="w-full" asChild>
+              <Link href="/signup">Sign up to connect</Link>
+            </Button>
+          )}
         </div>
       </div>
     </div>

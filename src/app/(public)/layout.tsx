@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { createClient } from "@/lib/supabase/server";
 
-export default function PublicLayout({
+export default async function PublicLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const isLoggedIn = !!user;
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -13,10 +20,10 @@ export default function PublicLayout({
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                VC
+                CC
               </div>
               <span className="text-xl font-bold tracking-tight">
-                VCConnect
+                CapConnect
               </span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
@@ -35,16 +42,24 @@ export default function PublicLayout({
             </nav>
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button size="sm" asChild>
-              <Link href="/signup">Sign Up</Link>
-            </Button>
-          </div>
+          {isLoggedIn ? (
+            <div className="hidden md:flex items-center gap-3">
+              <Button size="sm" asChild>
+                <Link href="/dashboard/discover">Dashboard</Link>
+              </Button>
+            </div>
+          ) : (
+            <div className="hidden md:flex items-center gap-3">
+              <Button variant="ghost" size="sm" asChild>
+                <Link href="/login">Login</Link>
+              </Button>
+              <Button size="sm" asChild>
+                <Link href="/signup">Sign Up</Link>
+              </Button>
+            </div>
+          )}
 
-          <MobileMenu />
+          <MobileMenu isLoggedIn={isLoggedIn} />
         </div>
       </header>
 
@@ -56,10 +71,10 @@ export default function PublicLayout({
             <div className="col-span-2 md:col-span-1">
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm">
-                  VC
+                  CC
                 </div>
                 <span className="text-xl font-bold tracking-tight">
-                  VCConnect
+                  CapConnect
                 </span>
               </Link>
               <p className="text-sm text-muted-foreground max-w-xs">
@@ -152,7 +167,7 @@ export default function PublicLayout({
 
           <div className="mt-12 border-t pt-8">
             <p className="text-sm text-muted-foreground text-center">
-              &copy; {new Date().getFullYear()} VCConnect. All rights reserved.
+              &copy; {new Date().getFullYear()} CapConnect. All rights reserved.
             </p>
           </div>
         </div>
@@ -161,7 +176,7 @@ export default function PublicLayout({
   );
 }
 
-function MobileMenu() {
+function MobileMenu({ isLoggedIn }: { isLoggedIn: boolean }) {
   return (
     <div className="md:hidden">
       <input type="checkbox" id="mobile-menu" className="peer hidden" />
@@ -200,12 +215,20 @@ function MobileMenu() {
             Resources
           </Link>
           <div className="flex flex-col gap-3 pt-4 border-t">
-            <Button variant="outline" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/signup">Sign Up</Link>
-            </Button>
+            {isLoggedIn ? (
+              <Button asChild>
+                <Link href="/dashboard/discover">Dashboard</Link>
+              </Button>
+            ) : (
+              <>
+                <Button variant="outline" asChild>
+                  <Link href="/login">Login</Link>
+                </Button>
+                <Button asChild>
+                  <Link href="/signup">Sign Up</Link>
+                </Button>
+              </>
+            )}
           </div>
         </nav>
       </div>

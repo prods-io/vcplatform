@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { analyzeDeck } from '@/lib/ai/analyze-deck'
 
+export const maxDuration = 60
+
 export async function POST(request: NextRequest) {
   try {
     const supabase = await createClient()
@@ -18,34 +20,63 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const body = await request.json()
-    const { text, file_name, file_url, startup_id } = body
+    // Parse multipart form data
+    const formData = await request.formData()
+    const file = formData.get('file') as File | null
+    const startupId = formData.get('startup_id') as string | null
 
-    if (!text || typeof text !== 'string' || text.trim().length === 0) {
+    if (!file) {
       return NextResponse.json(
-        { error: 'Missing or invalid "text" field. Provide the pitch deck text content.' },
+        { error: 'No file provided. Upload a PDF or PPTX file.' },
         { status: 400 }
       )
     }
 
-    // Run AI analysis
-    const analysis = await analyzeDeck(text.trim())
+    // Validate file type
+    const fileName = file.name.toLowerCase()
+    if (!fileName.endsWith('.pdf') && !fileName.endsWith('.pptx')) {
+      return NextResponse.json(
+        { error: 'Invalid file type. Only PDF and PPTX files are supported.' },
+        { status: 400 }
+      )
+    }
 
-    // Save analysis to the database
+    // Convert File to Buffer
+    const arrayBuffer = await file.arrayBuffer()
+    const buffer = Buffer.from(arrayBuffer)
+
+    // Upload to Supabase Storage
+    const storagePath = `${user.id}/${Date.now()}-${file.name}`
+    const { error: uploadError } = await supabase.storage
+      .from('pitch-decks')
+      .upload(storagePath, buffer, {
+        contentType: file.type,
+      })
+
+    let fileUrl: string | null = null
+    if (!uploadError) {
+      const {
+        data: { publicUrl },
+      } = supabase.storage.from('pitch-decks').getPublicUrl(storagePath)
+      fileUrl = publicUrl
+    }
+
+    // Run analysis
+    const analysis = await analyzeDeck(buffer, file.name)
+
+    // Save to database
     const { data: savedAnalysis, error: insertError } = await supabase
       .from('pitch_deck_analyses')
       .insert({
         user_id: user.id,
-        startup_id: startup_id || null,
-        file_name: file_name || 'pitch-deck.pdf',
-        file_url: file_url || null,
-        extracted_text: text.trim(),
-        score: analysis.score,
+        startup_id: startupId || null,
+        file_name: file.name,
+        file_url: fileUrl,
+        score: analysis.deckQualityScore,
+        vc_readiness: analysis.grade,
         strengths: analysis.strengths,
-        improvements: analysis.improvements,
-        missing_sections: analysis.missing_sections,
-        suggestions: analysis.suggestions,
-        vc_readiness: analysis.vc_readiness,
+        improvements: analysis.weaknesses,
+        analysis_data: analysis as unknown as Record<string, unknown>,
         analyzed_at: new Date().toISOString(),
       })
       .select()
@@ -54,27 +85,18 @@ export async function POST(request: NextRequest) {
     if (insertError) {
       console.error('Failed to save pitch deck analysis:', insertError)
       return NextResponse.json({
-        ...analysis,
-        overall_score: analysis.score,
-        file_name: file_name || 'pitch-deck.pdf',
+        analysis,
         saved: false,
       })
     }
 
     return NextResponse.json({
-      ...savedAnalysis,
-      overall_score: analysis.score,
+      id: savedAnalysis.id,
+      analysis,
       saved: true,
     })
   } catch (error) {
     console.error('Pitch deck analysis error:', error)
-
-    if (error instanceof SyntaxError) {
-      return NextResponse.json(
-        { error: 'Invalid JSON in request body.' },
-        { status: 400 }
-      )
-    }
 
     const message =
       error instanceof Error ? error.message : 'An unexpected error occurred.'

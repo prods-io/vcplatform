@@ -324,6 +324,7 @@ export interface Database {
           missing_sections: string[] | null
           suggestions: Record<string, string> | null
           vc_readiness: string | null
+          analysis_data: Record<string, unknown> | null
           analyzed_at: string | null
           created_at: string
           updated_at: string
@@ -341,6 +342,7 @@ export interface Database {
           missing_sections?: string[] | null
           suggestions?: Record<string, string> | null
           vc_readiness?: string | null
+          analysis_data?: Record<string, unknown> | null
           analyzed_at?: string | null
           created_at?: string
           updated_at?: string
@@ -358,6 +360,7 @@ export interface Database {
           missing_sections?: string[] | null
           suggestions?: Record<string, string> | null
           vc_readiness?: string | null
+          analysis_data?: Record<string, unknown> | null
           analyzed_at?: string | null
           created_at?: string
           updated_at?: string

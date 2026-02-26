@@ -362,15 +362,12 @@ export default async function VCProfilePage({ params }: PageProps) {
           </Card>
 
           {isLoggedIn ? (
-            vc.email ? (
-              <Button className="w-full" asChild>
-                <a href={`mailto:${vc.email}`}>Connect</a>
-              </Button>
-            ) : (
-              <Button className="w-full" disabled>
-                Connect
-              </Button>
-            )
+            <Button className="w-full" asChild>
+              <Link href={`/dashboard/outreach/compose/${vc.id}`}>
+                <Mail className="mr-2 h-4 w-4" />
+                Send Pitch
+              </Link>
+            </Button>
           ) : (
             <Button className="w-full" asChild>
               <Link href="/signup">Sign up to connect</Link>

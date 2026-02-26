@@ -1,5 +1,6 @@
 export const dynamic = 'force-dynamic';
 
+import React from 'react';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -7,10 +8,13 @@ import {
   FileText,
   TrendingUp,
   Bookmark,
-  Eye,
+  Mail,
   Target,
   ArrowRight,
   Building2,
+  Send,
+  Eye,
+  MousePointerClick,
 } from 'lucide-react';
 import { createClient } from '@/lib/supabase/server';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -69,6 +73,28 @@ export default async function DashboardPage() {
     .order('created_at', { ascending: false })
     .limit(5);
 
+  const { count: emailsSentCount } = await supabase
+    .from('outreach_emails')
+    .select('*', { count: 'exact', head: true })
+    .eq('user_id', user.id);
+
+  const { data: recentOutreach } = await supabase
+    .from('outreach_emails')
+    .select(`
+      id,
+      subject,
+      status,
+      sent_at,
+      vc_firms (
+        id,
+        name,
+        slug
+      )
+    `)
+    .eq('user_id', user.id)
+    .order('sent_at', { ascending: false })
+    .limit(5);
+
   const firstName = profile?.full_name?.split(' ')[0] ?? user.email?.split('@')[0] ?? 'there';
   const pitchScore = latestAnalysis?.score ?? null;
 
@@ -88,9 +114,9 @@ export default async function DashboardPage() {
       bg: 'bg-primary/10',
     },
     {
-      label: 'Profile Views',
-      value: '--',
-      icon: Eye,
+      label: 'Emails Sent',
+      value: emailsSentCount?.toString() ?? '0',
+      icon: Mail,
       color: 'text-green-400',
       bg: 'bg-green-900/30',
     },
@@ -246,6 +272,96 @@ export default async function DashboardPage() {
                     </Badge>
                     <p className="hidden text-xs text-muted-foreground sm:block">
                       {new Date(item.created_at).toLocaleDateString()}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      {/* Recent Outreach */}
+      <Card>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <CardTitle className="text-lg">Recent Outreach</CardTitle>
+          {(recentOutreach?.length ?? 0) > 0 && (
+            <Button asChild variant="ghost" size="sm">
+              <Link href="/dashboard/outreach">
+                View all <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
+          )}
+        </CardHeader>
+        <CardContent>
+          {!recentOutreach || recentOutreach.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-8 text-center">
+              <Mail className="h-10 w-10 text-muted-foreground/50" />
+              <p className="mt-3 text-sm font-medium text-foreground">No emails sent yet</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Send your pitch directly to investors from the platform.
+              </p>
+              <Button asChild variant="outline" size="sm" className="mt-4">
+                <Link href="/dashboard/discover">Discover VCs</Link>
+              </Button>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {recentOutreach.map((item: any) => {
+                const firm = item.vc_firms;
+                const outreachStatusColors: Record<string, string> = {
+                  sent: 'bg-blue-100 text-blue-700',
+                  sending: 'bg-blue-100 text-blue-700',
+                  delivered: 'bg-blue-100 text-blue-700',
+                  opened: 'bg-amber-100 text-amber-700',
+                  clicked: 'bg-green-100 text-green-700',
+                  bounced: 'bg-red-100 text-red-700',
+                  failed: 'bg-red-100 text-red-700',
+                };
+                const outreachStatusLabels: Record<string, string> = {
+                  sent: 'Sent',
+                  sending: 'Sending…',
+                  delivered: 'Delivered',
+                  opened: 'Opened',
+                  clicked: 'Clicked',
+                  bounced: 'Bounced',
+                  failed: 'Failed',
+                };
+                const OutreachIcons: Record<string, React.ElementType> = {
+                  sent: Send,
+                  sending: Send,
+                  delivered: Send,
+                  opened: Eye,
+                  clicked: MousePointerClick,
+                  bounced: Mail,
+                  failed: Mail,
+                };
+                const OutreachIcon = OutreachIcons[item.status] ?? Send;
+                return (
+                  <div
+                    key={item.id}
+                    className="flex items-center gap-4 rounded-lg border p-3 transition-colors hover:bg-accent"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                      {firm?.name ? getInitials(firm.name) : <Mail className="h-5 w-5" />}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium text-foreground">
+                        {firm?.name ?? 'Unknown'}
+                      </p>
+                      <p className="truncate text-xs text-muted-foreground">
+                        {item.subject}
+                      </p>
+                    </div>
+                    <Badge
+                      variant="secondary"
+                      className={`gap-1 ${outreachStatusColors[item.status] ?? outreachStatusColors.sent}`}
+                    >
+                      <OutreachIcon className="h-3 w-3" />
+                      {outreachStatusLabels[item.status] ?? 'Sent'}
+                    </Badge>
+                    <p className="hidden text-xs text-muted-foreground sm:block">
+                      {item.sent_at ? new Date(item.sent_at).toLocaleDateString() : ''}
                     </p>
                   </div>
                 );

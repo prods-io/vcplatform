@@ -310,6 +310,78 @@ export interface Database {
           }
         ]
       }
+      outreach_emails: {
+        Row: {
+          id: string
+          user_id: string
+          vc_firm_id: string
+          to_email: string
+          to_name: string | null
+          subject: string
+          body: string
+          status: string
+          resend_email_id: string | null
+          sent_at: string | null
+          delivered_at: string | null
+          opened_at: string | null
+          clicked_at: string | null
+          bounced_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          vc_firm_id: string
+          to_email: string
+          to_name?: string | null
+          subject: string
+          body: string
+          status?: string
+          resend_email_id?: string | null
+          sent_at?: string | null
+          delivered_at?: string | null
+          opened_at?: string | null
+          clicked_at?: string | null
+          bounced_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          vc_firm_id?: string
+          to_email?: string
+          to_name?: string | null
+          subject?: string
+          body?: string
+          status?: string
+          resend_email_id?: string | null
+          sent_at?: string | null
+          delivered_at?: string | null
+          opened_at?: string | null
+          clicked_at?: string | null
+          bounced_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "outreach_emails_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "outreach_emails_vc_firm_id_fkey"
+            columns: ["vc_firm_id"]
+            isOneToOne: false
+            referencedRelation: "vc_firms"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       pitch_deck_analyses: {
         Row: {
           id: string
@@ -390,3 +462,4 @@ export type VCFirm = Database["public"]["Tables"]["vc_firms"]["Row"]
 export type VCPartner = Database["public"]["Tables"]["vc_partners"]["Row"]
 export type SavedVC = Database["public"]["Tables"]["saved_vcs"]["Row"]
 export type PitchDeckAnalysis = Database["public"]["Tables"]["pitch_deck_analyses"]["Row"]
+export type OutreachEmail = Database["public"]["Tables"]["outreach_emails"]["Row"]

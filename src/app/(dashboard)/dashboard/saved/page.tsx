@@ -11,6 +11,10 @@ import {
   Calendar,
   Building2,
   MessageSquare,
+  Mail,
+  Eye,
+  MousePointerClick,
+  Send,
 } from 'lucide-react';
 import { createBrowserClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
@@ -78,6 +82,20 @@ function getInitials(name: string) {
     .slice(0, 2);
 }
 
+// Maps vc_firm_id → latest outreach email status
+const OUTREACH_STATUS_CONFIG: Record<
+  string,
+  { label: string; className: string; Icon: React.ElementType }
+> = {
+  sent: { label: 'Email sent', className: 'bg-blue-900/30 text-blue-300', Icon: Send },
+  delivering: { label: 'Email sent', className: 'bg-blue-900/30 text-blue-300', Icon: Send },
+  delivered: { label: 'Email sent', className: 'bg-blue-900/30 text-blue-300', Icon: Send },
+  opened: { label: 'Opened', className: 'bg-amber-900/30 text-amber-300', Icon: Eye },
+  clicked: { label: 'Clicked', className: 'bg-green-900/30 text-green-300', Icon: MousePointerClick },
+  bounced: { label: 'Bounced', className: 'bg-red-900/30 text-red-300', Icon: Mail },
+  failed: { label: 'Failed', className: 'bg-red-900/30 text-red-300', Icon: Mail },
+};
+
 export default function SavedVCsPage() {
   const supabase = createBrowserClient();
   const { toast } = useToast();
@@ -89,6 +107,7 @@ export default function SavedVCsPage() {
   const [editNotes, setEditNotes] = useState('');
   const [editStatus, setEditStatus] = useState<'saved' | 'contacted' | 'in_conversation' | 'passed'>('saved');
   const [saving, setSaving] = useState(false);
+  const [emailStatuses, setEmailStatuses] = useState<Record<string, string>>({});
 
   useEffect(() => {
     fetchSaved();
@@ -128,7 +147,28 @@ export default function SavedVCsPage() {
     }
 
     const { data } = await query;
-    setItems((data as unknown as SavedVC[]) ?? []);
+    const savedItems = (data as unknown as SavedVC[]) ?? [];
+    setItems(savedItems);
+
+    // Fetch latest outreach email status for each saved VC
+    const vcIds = savedItems.map((item) => item.vc_firm_id);
+    if (vcIds.length > 0) {
+      const { data: outreachData } = await supabase
+        .from('outreach_emails')
+        .select('vc_firm_id, status')
+        .eq('user_id', user.id)
+        .in('vc_firm_id', vcIds)
+        .order('sent_at', { ascending: false });
+
+      const map: Record<string, string> = {};
+      for (const email of outreachData ?? []) {
+        if (!map[email.vc_firm_id]) {
+          map[email.vc_firm_id] = email.status;
+        }
+      }
+      setEmailStatuses(map);
+    }
+
     setLoading(false);
   }
 
@@ -297,11 +337,28 @@ export default function SavedVCsPage() {
                         </p>
                       )}
                     </div>
-                    <Badge
-                      className={`shrink-0 ${statusColors[item.status] ?? statusColors.saved}`}
-                    >
-                      {item.status.replace('_', ' ')}
-                    </Badge>
+                    <div className="flex items-center gap-2 shrink-0">
+                      {emailStatuses[item.vc_firm_id] ? (() => {
+                        const cfg = OUTREACH_STATUS_CONFIG[emailStatuses[item.vc_firm_id]];
+                        if (!cfg) return null;
+                        const { Icon } = cfg;
+                        return (
+                          <Badge className={`gap-1 text-xs ${cfg.className}`}>
+                            <Icon className="h-3 w-3" />
+                            {cfg.label}
+                          </Badge>
+                        );
+                      })() : (
+                        <span className="text-xs text-muted-foreground hidden sm:inline">
+                          Not contacted
+                        </span>
+                      )}
+                      <Badge
+                        className={statusColors[item.status] ?? statusColors.saved}
+                      >
+                        {item.status.replace('_', ' ')}
+                      </Badge>
+                    </div>
                     {isExpanded ? (
                       <ChevronUp className="h-4 w-4 shrink-0 text-muted-foreground" />
                     ) : (
@@ -385,7 +442,7 @@ export default function SavedVCsPage() {
                       </div>
 
                       {/* Actions */}
-                      <div className="flex items-center gap-3">
+                      <div className="flex flex-wrap items-center gap-3">
                         <Button
                           size="sm"
                           onClick={() => handleSave(item.id)}
@@ -399,6 +456,20 @@ export default function SavedVCsPage() {
                           onClick={() => setExpandedId(null)}
                         >
                           Cancel
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="gap-1.5"
+                          asChild
+                        >
+                          <Link
+                            href={`/dashboard/outreach/compose/${item.vc_firm_id}`}
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Mail className="h-3.5 w-3.5" />
+                            Send Email
+                          </Link>
                         </Button>
                         {firm?.slug && (
                           <Link

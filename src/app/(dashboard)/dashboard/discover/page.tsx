@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import {
   Search,
   Heart,
+  Mail,
   MapPin,
   SlidersHorizontal,
   X,
@@ -497,20 +498,33 @@ export default function DiscoverPage() {
                           </Badge>
                         </div>
                       </div>
-                      <button
-                        onClick={(e) => { e.stopPropagation(); toggleSave(vc.id); }}
-                        disabled={togglingId === vc.id}
-                        className="shrink-0 p-1 transition-colors"
-                        aria-label={savedIds.has(vc.id) ? 'Unsave' : 'Save'}
-                      >
-                        <Heart
-                          className={`h-5 w-5 ${
-                            savedIds.has(vc.id)
-                              ? 'fill-red-500 text-red-500'
-                              : 'text-muted-foreground/50 hover:text-red-400'
-                          }`}
-                        />
-                      </button>
+                      <div className="flex items-center gap-1 shrink-0">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            router.push(`/dashboard/outreach/compose/${vc.id}`);
+                          }}
+                          className="p-1 transition-colors"
+                          aria-label="Send pitch email"
+                          title="Send pitch email"
+                        >
+                          <Mail className="h-4 w-4 text-muted-foreground/50 hover:text-primary" />
+                        </button>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); toggleSave(vc.id); }}
+                          disabled={togglingId === vc.id}
+                          className="p-1 transition-colors"
+                          aria-label={savedIds.has(vc.id) ? 'Unsave' : 'Save'}
+                        >
+                          <Heart
+                            className={`h-5 w-5 ${
+                              savedIds.has(vc.id)
+                                ? 'fill-red-500 text-red-500'
+                                : 'text-muted-foreground/50 hover:text-red-400'
+                            }`}
+                          />
+                        </button>
+                      </div>
                     </div>
 
                     {/* Stages */}

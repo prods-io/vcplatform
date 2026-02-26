@@ -13,6 +13,7 @@ import {
   LogOut,
   Menu,
   ChevronDown,
+  Mail,
 } from 'lucide-react';
 import { createBrowserClient } from '@/lib/supabase/client';
 import { Button } from '@/components/ui/button';
@@ -32,6 +33,7 @@ const navLinks = [
   { label: 'Dashboard', icon: LayoutDashboard, href: '/dashboard' },
   { label: 'Discover VCs', icon: Search, href: '/dashboard/discover' },
   { label: 'Saved VCs', icon: Bookmark, href: '/dashboard/saved' },
+  { label: 'Outreach', icon: Mail, href: '/dashboard/outreach' },
   { label: 'My Startup', icon: Building2, href: '/dashboard/startup' },
   { label: 'Pitch Deck', icon: FileText, href: '/dashboard/pitch-deck' },
   { label: 'Profile', icon: User, href: '/dashboard/profile' },
